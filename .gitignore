@@ -1,0 +1,19 @@
+#LaTeX folder files
+/**/TeX/*
+!fig/
+!*.tex
+!*.pdf
+!*.bib
+
+#data folder
+data/
+
+.vscode/
+*.py
+
+*.doc
+*.docx
+
+*.zip
+*.txt
+*.dat
