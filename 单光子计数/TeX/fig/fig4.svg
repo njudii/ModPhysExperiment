@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="250mm"
+   height="176mm"
+   viewBox="0 0 250 176"
+   version="1.1"
+   id="svg1018"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="fig4.svg">
+  <defs
+     id="defs1012">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1041"
+       is_visible="true"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.7560823"
+     inkscape:cx="276.83977"
+     inkscape:cy="203.165"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata1015">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-121)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 26.304208,133.61364 V 277.22623 H 231.92165"
+       id="path1020"
+       inkscape:connector-curvature="0" />
+    <path
+       sodipodi:type="star"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.51511639;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path1022"
+       sodipodi:sides="3"
+       sodipodi:cx="230.47684"
+       sodipodi:cy="285.43802"
+       sodipodi:r1="1.4483997"
+       sodipodi:r2="0.72419983"
+       sodipodi:arg1="2.0943951"
+       sodipodi:arg2="3.1415927"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 229.75264,286.69237 0,-1.25435 0,-1.25435 1.0863,0.62717 1.0863,0.62718 -1.0863,0.62717 z"
+       inkscape:transform-center-x="-0.57756954"
+       inkscape:transform-center-y="-7.5966203e-006"
+       transform="matrix(1.5949946,0,0,0.59070413,-137.67824,108.65676)" />
+    <path
+       sodipodi:type="star"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.51511639;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path1022-6"
+       sodipodi:sides="3"
+       sodipodi:cx="230.47684"
+       sodipodi:cy="285.43802"
+       sodipodi:r1="1.4483997"
+       sodipodi:r2="0.72419983"
+       sodipodi:arg1="2.0943951"
+       sodipodi:arg2="3.1415927"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 229.75264,286.69237 0,-1.25435 0,-1.25435 1.0863,0.62717 1.0863,0.62718 -1.0863,0.62717 z"
+       inkscape:transform-center-x="4.8501606e-006"
+       inkscape:transform-center-y="-0.57757141"
+       transform="matrix(0,-1.5949946,0.59070412,0,-142.3052,503.00397)" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 37.2396,277.01254 c 0.996198,-8.72435 1.992356,-17.44835 5.818329,-32.26275 3.825973,-14.8144 10.481822,-35.71963 14.655095,-46.7059 4.173273,-10.98628 5.863848,-12.05401 7.331764,-12.52101 1.467915,-0.467 2.713862,-0.33351 3.981438,1.53446 1.267577,1.86796 2.55803,5.47233 4.448837,9.56538 1.890806,4.09305 4.382003,8.67507 6.250712,10.96626 1.86871,2.29119 3.11434,2.29119 4.277183,1.43591 1.162843,-0.85528 2.218158,-2.52619 4.953677,-6.44042 2.735519,-3.91423 7.140841,-10.05499 11.497315,-14.77165 4.35648,-4.71667 8.54084,-7.91581 11.48998,-9.94573 2.94913,-2.02992 4.33164,-2.66261 5.93877,-2.49236 1.60712,0.17025 3.39824,1.16212 5.15003,2.09337 1.75179,0.93125 3.46389,1.80168 4.80993,2.41513 1.34604,0.61346 2.3245,0.96926 3.2676,1.09886 0.9431,0.12959 1.85035,0.033 2.50399,-0.81607 0.65363,-0.84905 1.05414,-2.45105 1.57108,-4.18473 0.51695,-1.73369 1.15073,-3.60042 1.77863,-5.59244 0.62791,-1.99203 1.25019,-4.11012 2.40556,-4.56267 1.15538,-0.45254 2.84488,0.75988 6.33194,7.37834 3.48707,6.61846 8.77261,18.64422 15.64172,33.15426 6.86911,14.51005 15.3217,31.5042 21.81702,41.69205 6.49532,10.18785 11.03306,13.56891 16.77208,15.92677 5.73901,2.35786 12.67922,3.69252 19.61907,5.02711"
+       id="path1039"
+       inkscape:connector-curvature="0"
+       inkscape:path-effect="#path-effect1041"
+       inkscape:original-d="m 37.2396,277.01254 c 0.996429,-8.72432 1.992586,-17.44832 2.988472,-26.17198 6.655993,-20.90512 13.311841,-41.81035 19.96733,-62.71501 1.690842,-1.06802 3.381419,-2.13575 5.071631,-3.20314 1.245708,0.13311 2.491656,0.2666 3.736989,0.4004 1.29018,3.60235 2.580635,7.20672 3.870453,10.81058 2.491789,4.58217 4.982986,9.16419 7.47398,13.74678 1.24603,-3.2e-4 2.49166,-3.2e-4 3.73699,0 1.11224,-1.69042 2.13576,-3.38141 3.20314,-5.07162 4.40363,-6.13827 8.80896,-12.27902 13.212925,-18.41803 4.3089,-3.2944 8.49326,-6.49354 12.92644,-9.88286 1.46506,-0.67061 2.84757,-1.3033 4.27085,-1.95451 1.7912,0.99151 3.58231,1.98339 5.37307,2.97548 1.71281,0.8704 3.42491,1.74084 5.13764,2.61199 0.97933,0.35567 1.9578,0.71147 2.93621,1.06771 0.9076,-0.097 1.81486,-0.19356 2.72178,-0.28983 0.40062,-1.60147 0.80112,-3.20347 1.20118,-4.8047 0.6338,-1.86613 1.26758,-3.73286 1.90087,-5.59878 0.62249,-2.11815 1.24477,-4.23624 1.86656,-6.35329 1.689,1.21161 3.3785,2.42403 5.06727,3.63638 5.28547,12.02473 10.57101,24.05049 15.85613,36.07618 8.45317,16.99434 16.90577,33.98849 25.35815,50.98324 4.53814,3.38078 9.07588,6.76184 13.61332,10.14325 6.94038,1.3343 13.88059,2.66896 20.82037,4.00393"
+       sodipodi:nodetypes="cccccccccccccccccccccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.5, 1.5;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 82.342948,177.5071 v 99.29298"
+       id="path1045"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g1066"
+       style="stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(0.48591159,0.51024451,-0.51024451,0.48591159,99.935563,69.55768)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1047"
+         d="M 51.990315,153.3874 H 77.985471"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         transform="matrix(1.0492183,0,0,0.38857661,-165.13011,42.477568)"
+         inkscape:transform-center-y="-4.8192992e-006"
+         inkscape:transform-center-x="-0.37992254"
+         d="m 229.75264,286.69237 0,-1.25435 0,-1.25435 1.0863,0.62717 1.0863,0.62718 -1.0863,0.62717 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="false"
+         sodipodi:arg2="3.1415927"
+         sodipodi:arg1="2.0943951"
+         sodipodi:r2="0.72419983"
+         sodipodi:r1="1.4483997"
+         sodipodi:cy="285.43802"
+         sodipodi:cx="230.47684"
+         sodipodi:sides="3"
+         id="path1022-6-6"
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.78306669;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         sodipodi:type="star" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="39.514858"
+       y="166.42732"
+       id="text1070"><tspan
+         sodipodi:role="line"
+         id="tspan1068"
+         x="39.514858"
+         y="166.42732"
+         style="font-size:6.3499999px;stroke-width:0.26458332">光电倍增管噪声</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="65.468246"
+       y="285.32996"
+       id="text1074"><tspan
+         sodipodi:role="line"
+         id="tspan1072"
+         x="65.468246"
+         y="285.32996"
+         style="stroke-width:0.26458332">V<tspan
+   style="font-size:64.99999762%;baseline-shift:sub"
+   id="tspan1076">h</tspan>(甄别电平)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="202.65047"
+       y="286.08337"
+       id="text1074-4"><tspan
+         sodipodi:role="line"
+         id="tspan1072-1"
+         x="202.65047"
+         y="286.08337"
+         style="stroke-width:0.26458332">脉冲幅度V</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="158.06012"
+       y="180.56491"
+       id="text1074-6"><tspan
+         sodipodi:role="line"
+         id="tspan1072-2"
+         x="158.06012"
+         y="180.56491"
+         style="stroke-width:0.26458332">单光电子峰</tspan></text>
+    <g
+       id="g1066-5"
+       style="stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(-0.67541519,-0.20068344,0.20068344,-0.67541519,169.62028,287.01701)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1047-2"
+         d="M 51.990315,153.3874 H 77.985471"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         transform="matrix(1.0492183,0,0,0.38857661,-165.13011,42.477568)"
+         inkscape:transform-center-y="-4.8192992e-006"
+         inkscape:transform-center-x="-0.37992254"
+         d="m 229.75264,286.69237 0,-1.25435 0,-1.25435 1.0863,0.62717 1.0863,0.62718 -1.0863,0.62717 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="false"
+         sodipodi:arg2="3.1415927"
+         sodipodi:arg1="2.0943951"
+         sodipodi:r2="0.72419983"
+         sodipodi:r1="1.4483997"
+         sodipodi:cy="285.43802"
+         sodipodi:cx="230.47684"
+         sodipodi:sides="3"
+         id="path1022-6-6-0"
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.78306669;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         sodipodi:type="star" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;writing-mode:tb-rl;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="20.029055"
+       y="176.61258"
+       id="text1132"><tspan
+         sodipodi:role="line"
+         id="tspan1130"
+         x="170.64648"
+         y="25.995155"
+         style="stroke-width:0.26458332">脉冲计数率</tspan></text>
+  </g>
+</svg>

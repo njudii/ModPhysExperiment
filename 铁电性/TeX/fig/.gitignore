@@ -1,0 +1,6 @@
+*.png
+*.gif
+*.pdf
+!1200V.pdf
+!1550V.pdf
+!fig*.pdf

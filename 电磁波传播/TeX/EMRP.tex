@@ -1,0 +1,163 @@
+% !Mode:: "TeX:UTF-8"
+% !TEX program  = xelatex
+\documentclass[a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{ctex}
+%\usepackage{braket}
+%\usepackage[european]{circuitikz}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,bottom=2.5cm,top=2.5cm}
+\title{近代物理实验报告11.5：电磁波传播}
+\author{xy\quad 学号\quad 匡亚明学院}
+\date{2019年2月29日}
+\begin{document}
+\maketitle
+\bibliographystyle{unsrt}
+%--------main-body------------
+
+\section{实验目的}
+\begin{enumerate}
+\item 了解电磁波测试平台的结构，掌握工作原理.
+\item 利用相干波原理，测定自由空间内电磁波波长$\lambda$.
+\item 验证反射定律.
+\end{enumerate}
+
+\section{实验仪器}
+微波信号发生器、电磁波测试平台、反射金属板、半透射玻璃板.
+
+\section{实验原理}
+\subsection{自由空间电磁波参量的测量}
+当两束等幅，同频率的均匀平面电磁波，在自由空间内沿着相同或者反方向传播时，由于相位不同发生干涉现象，在传播路径上可以形成驻波场分布.本实验正是利用相干波的原理，通过测定驻波场节点的分布，求的自由空间中电磁波波长$\lambda$，再由
+$$K=2\pi/\lambda,$$
+$$v=\lambda f=\omega/K$$
+得到电磁波的主要参数$K$和$v$等.
+
+电磁波测试平台与\textbf{迈克尔逊干涉仪}的原理类似，用$P_T$和$P_R$分别表示发射和接收喇叭天线，A和B分别表示固定和可移动的金属反射板，$C$表示半透射板.由$P_T$发射平面电磁波，在平面波前进的方向上放置成45$^\circ$角的半透射板，由于该板的作用，将入射波分成两束波，一束向A板方向传播，另一束向B板方向传播.由于A和B为金属全反射板，两列波就再次返回到半透射板并达到接收喇叭天线$P_R$处.于是$P_R$收到两束同频率，振动方向一致的两个波.如果这两个波的相位差为$\pi$的偶数倍，则干涉加强；如果相位差为$\pi$的奇数倍，则干涉减弱.
+
+移动反射板B，当$P_R$的表头从一次极小变到另一次极小的时候，则反射板B就移动了$\lambda/2$的距离，由这个距离就可以求得平面波的的波长.
+
+设入射波为垂直极化波
+$$\vec{E}_i=E_0{\rm e}^{-j\phi}$$
+
+当入射波以入射角$\theta_1$向介质板C斜入射时，在分界面上产生反射波$\vec{E}_r$和折射波$\vec{E}_t$.设C板的反射系数为$R$，$T_0$为由空气进入介质板的折射系数，$T_c$为由介质板进入空气的折射系数.固定板A和可移动板B都是金属板，反射系数均为-1.在一次近似的条件下，接收喇叭天线$P_R$处的相干波分别为
+$$\vec{E}_{r1}=-RT_0T_c\vec{E}_0{\rm e}^{-j\phi_1}$$
+$$\vec{E}_{r2}=-RT_0T_c\vec{E}_0{\rm e}^{-j\phi_2}$$
+这里
+$$\phi_1=K(l_1+l_3)=KL_1$$
+$$\phi_2=K(l_2+l_3)=K(l_1+l_3+\Delta L)=KL_2$$
+其中，$\Delta L=|L_2-L_1|$为B板移动距离，而$\vec{E}_{r1}$与$\vec{E}_{r2}$传播的路程差为$2\Delta L$.
+
+由于$\vec{E}_{r1}$与$\vec{E}_{r2}$的相位差为$\Delta \phi=\phi_2-\phi_1=2K\Delta L$，因此，当$2\Delta L$满足
+$$2\Delta L = n\lambda, (n=0,1,2,...)$$
+$\vec{E}_{r1}$和$\vec{E}_{r2}$同相叠加，接收指示为最大.
+
+当$2\Delta L$时满足
+$$2\Delta L=(2n+1)\lambda/2, (n=0,1,2,...)$$
+$\vec{E}_{r1}$和$\vec{E}_{r2}$反相抵消，接收指示为零.这里，n表示相干波合成驻波场的波节点数.
+
+沿一个方向改变反射板B的位置，使$P_R$输出重复出现最大指示，或重复出现零指示即可测出电磁波波长$\lambda$.为了测准$\lambda$值，一般采用$P_R$零指示的方法.
+
+相干波$\vec{E}_{r1}$和$\vec{E}_{r2}$的分布中$n=0$的节点处$\Delta L_0$作为第一个波节点，对于$n\neq0$的各个值则有
+$$n=1,2\Delta L_1=\frac{3}{2}\lambda,\text{对应第二个波节点，或第一个半波长数.}$$
+$$n=2,2\Delta L_2=\frac{5}{2}\lambda,\text{对应第三个波节点，或第二个半波长数.}$$
+$$......$$
+$$n=N,2\Delta L_N=\frac{2N+1}{2}\lambda,\text{对应第}N+1\text{个波节点，或第}N\text{个半波长数.}$$
+
+由此可知，两个相邻波节点间的距离为$\Delta L_n-\Delta_{n-1}=\lambda/2(n+1)$个波节点之间共有n个半波长，即$(\Delta L_n-\Delta L_0)=n\lambda/2$，可得波长的平均值为
+$$\lambda=2(\Delta L_n-\Delta L_0)/n$$
+
+实验中可移动板B移动时不可能出现无限多个驻波节点，测试中一般选取$n=4$已经足够，它相当于5个驻波节点，这时被测电磁波波长的平均值为
+$$\lambda=2(\Delta L_4-\Delta L_0)/4$$
+\subsection{验证反射定律}
+选取一定入射角，测量反射角，验证反射定律.
+%---------实验内容----------------------------------
+
+\section{实验内容}
+\begin{enumerate}
+\item 整体机械调整，使$P_T$和$P_R$相向，轴线在同一水平面线上，调整信号电平，使得$P_R$表头指示接近满刻度.
+\item 安装反射板A和B，半透射板C，注意AB轴向成90$^\circ$角，C板法向与A板法向成45$^\circ$角，并注意反射板A、B的法向分别与$P_R$、$P_T$的轴向重合.
+\item 固定A板，用旋转手柄移动B板，使得$P_R$表头指示接近零，记下零指示的起始位置.
+\item 用旋转手柄使B板移动，再从表头上测出n个极小值，同时从读数机构上得到响应于（3）的起始零指示位置求得反射板移动的距离$\Delta L_n-\Delta L_0$，连续测三次，求平均值，取$n=3$或$n=4$即可.
+\item 根据测得的4个$\Delta L_n$，计算波长$\lambda$.
+\end{enumerate}
+
+\section{实验数据}
+\subsection{测量电磁波波长}
+实验所用的微波源的频率为：
+$$f_0 = 9.37\text{GHz}$$
+可算出对应的波长理论值为：
+\begin{equation}
+\lambda_0 = \cfrac{c}{f_0} = \cfrac{3\times 10^8}{9.37\times 10^9} \approx 32.02\text{mm}
+\end{equation}
+
+实验测得4个波节处对应的位置读数如表(\ref{lambda})：
+\begin{table}[!h]
+\centering
+\caption{测量电磁波波长}
+\label{lambda}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+位置编号    & $x_1$  & $x_2$  & $x_3$  & $x_4$  \\ \hline
+位置数据/mm & 15.670 & 30.045 & 46.104 & 62.575 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{enumerate}
+\item 逐项相减计算波长\\
+将4个$x_i$数据逐项相减，得到3个$\Delta x_i$，取平均数$\Delta x_1 = 15.635$mm，计算实验波长值为：
+\begin{equation}
+\lambda_1 = 2\times\Delta x_1 = 31.27\text{mm}
+\end{equation}
+误差为：
+\begin{equation}
+Error_1 = \cfrac{31.27 - 32.02}{32.02}\times 100\% \approx -2.34\%
+\end{equation}
+\item 逐差法计算波长\\
+\begin{equation}
+\Delta x_2 = \cfrac{(62.575+46.104) - (30.045+15.670)}{4} = 15.741\text{mm}
+\end{equation}
+计算实验波长
+\begin{equation}
+\lambda_2 = 2\times\Delta x_2 = 31.482\text{mm}
+\end{equation}
+误差为：
+\begin{equation}
+Error_2 = \cfrac{31.482 - 32.02}{32.02}\times 100\% \approx -1.68\%
+\end{equation}
+\end{enumerate}
+可见使用逐差法计算的实验波长的误差较小.
+\subsection{验证反射定律}
+验证反射定律的数据如表(\ref{ReflexLaw})：
+\begin{table}[!h]
+\centering
+\caption{验证反射定律}
+\label{ReflexLaw}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+入射角$\theta_I$/$^\circ$ & 20 & 30   & 40   & 50   & 60   & 70   & 80   \\ \hline
+反射角$\theta_R$/$^\circ$ & 21 & 27.8 & 41.0 & 49.0 & 60.4 & 74.3 & 80.0 \\ \hline
+电流计读数/$\mu$A           & 62 & 52   & 60   & 63   & 64   & 46   & 46   \\ \hline
+\end{tabular}
+\end{table}
+
+\section{误差分析}
+\subsection{测量波长的误差}
+\begin{enumerate}
+\item 在使用螺旋测微器读数时，我们发现螺旋测微器游标刻度对应的位置和螺旋的刻度所示的数值有一些较明显的偏差，怀疑是仪器本身可能存在问题.
+\item 对波节的判断是靠人眼判断的，而实验中发现原本应当仅有一个点的波节在测量时常常为一段区域，因此读数时人的判断标准差异可能会造成误差.
+\end{enumerate}
+\subsection{验证反射定律时的误差}
+\begin{enumerate}
+\item 金属板调整角度时有一定的误差.因为实验平台的设计原因，我们不能准确的将金属板调到对应刻度的角度.这样的金属板可能会使入射反射角读数不准，是误差的主要来源.
+\item 金属板不是严格的全反射板.有限的电导率使得在一定角度范围内接收反射波，测得的强度变化不大，造成反射角读数不准.
+\item 金属板表面不平整造成的误差.
+\item 电磁波发射源的形状为敞口喇叭状，我们推测微波源出射的微波可能不够准直，不是一条直线而是一束发散的电磁波，从而在测量反射波时产生误差.
+\end{enumerate}
+
+\nocite{jiaocai}
+\bibliography{ref}
+\end{document}
