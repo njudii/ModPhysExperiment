@@ -145,7 +145,8 @@
     \caption{实验数据}\label{data:table}
 \end{table}
 
-将表中数据和对数据的差分绘制在坐标轴中，采用样条插值的方式对差分数据进行拟合，寻找原始数据斜率最大、即差分极小值点对应的温度，即为该材料的居里温度，如图(\ref{data:fig})所示。
+将表中数据和对数据的差分绘制在坐标轴中，采用样条插值(see comment) %注：应该用移动平均法(wiki: Moving Average)(thanks to: WilliamXu)
+的方式对差分数据进行拟合，寻找原始数据斜率最大、即差分极小值点对应的温度，即为该材料的居里温度，如图(\ref{data:fig})所示。
 \begin{figure}[!h]
 \centering
 \includegraphics[width=\textwidth]{fig/data.pdf}
@@ -155,6 +156,7 @@
 从图(\ref{data:fig})可以得知，实验测得的该物质的居里温度$T_C\doteq 26.14 ^{\circ}$C。
 
 \section{实验讨论}
+\iffalse
 对于铁磁转变为顺磁性的物质在顺磁时应满足如下的居里定律：
 \begin{eqnarray*}
     \chi_m &=& \frac{C}{T-T_c}\\
@@ -176,25 +178,20 @@
 \end{figure}
 
 从图中可以看出，当U较小时，U与$\frac{1}{T-T_c}$成线性关系，H不为零。当U较大时，线性关系发生变化。猜测有两个原因，其一是U变大时，补偿线圈和探测线圈的差值逐渐变大，到时H发生变化从而改变线性关系。其二是当材料越过所标定的居里温度点时，材料并没有完全转变为顺磁材料，还保有一定的铁磁性。
+\fi
 
 \section{误差分析}
+\iffalse
 \begin{enumerate}
     \item 实验仪器的系统误差，由于实验仪器的精确度有所限制，所以会对实验结果产生一定的误差。
     \item 探测线圈和补偿线圈实际上并不能完全抵消。
     \item 实验中为了消除流体边界层的影响加入了搅拌来使样品均匀升温，但实验中观察到搅拌棒会引起大量气泡，实际上影响了样品表面温度。
     \item 拟合曲线时的误差。我们注意到使用不同的拟合方法得到的结果也不完全相同。
 \end{enumerate}
+\fi
 
 \section{思考题}
 \subsection{如果探测线圈A和补偿线圈B在绕制时不完全相同，会对测到得$M_s - T$曲线以及$T_c$产生什么影响？}
-由实验原理描述中的叙述可知，如果探测线圈A和补偿线圈B在绕制时不完全相同，则激励磁场H产生的电动势不能完全抵消，会反映在11$^{'}$端测量的电压中，即：
-\begin{eqnarray*}
-    U &=& \epsilon_A - \epsilon_B = -\mu_0A\left(\cfrac{\text{d}\left(H_A - H_B\right)}{\text{d}t} + \cfrac{\text{d}M}{\text{d}t}\right)\\
-    \bar{U} &=& \frac{1}{T}\int_{T}U\text{d}t = -\cfrac{\mu_0A\left(M + \left(H_A - H_B\right)\right)}{T}
-\end{eqnarray*}
-在测量的结果中叠加上一个常量($H_A$-$H_B$)，理论上对求导获得居里温度没有影响，但是由于激励磁场远大于M，结果会使M导致的电压变化被淹没在激励磁场H的变化中，使得结果精确度大大降低。
-
-本实验由于用水来使样品升温，利用搅拌棒消除边界层影响，但实际上温度不均匀的现象并未完全消除。因而，在实际实验中，$M_s - T$对应值并不是严格的平滑曲线，而是有些许的波动，个别点出现反常的升高现象，这应该就是属于水中温度不均匀导致的结果。
 
 \nocite{jiaocai}
 \bibliography{ref}

@@ -156,54 +156,16 @@ Mg & 2          & 0         & -2         & 3    & 3/2    & 0   & -3/2   & -3   \
 \section{实验数据}
 
 \section{误差分析}
+\iffalse
 \begin{enumerate}
 \item 测量磁感应强度时由于磁场自身波动以及探测头的晃动，磁感应强度的数值一直在波动产生误差，并且实际的磁场不是严格的匀强磁场，磁感应强度不是处处与磁场中心（测量点）相等；
 \item 测量圆环条纹的半径时，取定的三个测量点并非严格地位于同一组同心圆上，导致半径的测量存在误差。
 \end{enumerate}
+\fi
 
 \section{思考题}
 \subsection{对于塞曼效应的横效应，磁感应强度的最大值和最小值由什么决定？假定F-P标准具间隔圈厚度h=2mm，其最大值和最小值各是多少？}
-由(\ref{eq10})式可知
-\begin{equation*}
-\Delta\tilde{\nu}\propto B
-\end{equation*}
-也就是说找到$\Delta\tilde{\nu_R}$的最大值和最小值即可找到磁感应强度的最大值和最小值。
-\begin{enumerate}
-\item 由F-P标准具自由光谱区的定义可知，自由光谱区即为$\Delta\tilde{\nu_R}$的最大值，对h=2mm而言
-\begin{equation*}
-\Delta\tilde{\nu} = 2.5\times 10^2\text{m}^{-1}
-\end{equation*}
-代回(\ref{eq10})式可知
-\begin{equation*}
-B_{\text{max}} \approx 10.71T
-\end{equation*}
-\item 由分辨本领的定义可知，$\Delta\tilde{\nu_R}$的最小值由标准具的分辨本领决定。分辨本领的定义式是
-\begin{equation*}
-F = \frac{\Delta\lambda_R}{\delta_\lambda}
-\end{equation*}
-并且如果已知F-P玻璃板内表面的反射率R的话，也可以用下式计算出分辨本领
-\begin{equation*}
-F = \frac{\pi\sqrt{R}}{1-R}
-\end{equation*}
-结合
-\begin{equation*}
-\tilde{\nu_R} = \frac{\Delta\lambda_R}{\lambda^2}
-\end{equation*}
-可得
-\begin{equation*}
-\tilde{\nu}_{Rmin} = \frac{\delta_\lambda\pi\sqrt{R}}{\lambda^2(1-R)} = \frac{\delta_\lambda}{\lambda^2}F
-\end{equation*}
-进而
-\begin{equation*}
-B_{min} = \frac{4\pi mc\delta_\lambda}{e(M_2g_2 - M_1g_1)\lambda^2}F
-\end{equation*}
-也就是说，只要知道F-P标准具的分辨本领或标准具能分辨的最小波长差，即可求出$B_{min}$。
-\end{enumerate}
 \subsection{实验中如何鉴别成分和成分？如何观察和分辨成分中左旋和右旋圆偏振光？}
-\begin{enumerate}
-\item 当$\Delta$M=0，在垂直于磁场的方向可观察到$\pi$线，也就是光振动方向平行于磁场方向的线偏振光。而平行于磁场方向观察不到$\pi$线，即其强度为零。
-\item 当$\Delta$M=$\pm$1，在垂直于磁场的方向可观察到$\sigma$线，也就是光振动方向垂直于磁场的线偏振光。其中，沿磁场方向观察时，$\Delta$M=1是以磁场方向为正向的右旋圆偏振光，$\Delta$M=$-$1是以磁场方向为正向的左旋偏振光。
-\end{enumerate}
 
 \nocite{jiaocai}
 \bibliography{ref}

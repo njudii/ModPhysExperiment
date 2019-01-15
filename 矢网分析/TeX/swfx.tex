@@ -178,30 +178,8 @@ $\lambda_g$为待测材料中的波导波长。根据式(\ref{eq4.18})来决定�
 \end{figure}
 
 \section{思考题}
-\begin{enumerate}
-\item \textbf{本实验测得材料的介电常数和磁导率其主要误差来源是什么？}
-\begin{enumerate}
-\item 实验中的样品和端口需要贴合紧密，而实验过程中靠手固定容易松动，可能增加了微波传播的距离和界面复杂因素。
-\item 实验中样品固定在铜质底座上，与端口对接时有可能不能将样品完全与端口窗口对齐，导致端口与铜部分重叠，使得测量数据不准确。
-\item 实验仪器本身的误差。实验中发现，实验仪器极为不稳定，首先校准时就有发现反向校准的高频段总是不能校准，另外实验过程中，理论上应该相等的$s_{11}$、$s_{22}$和$s_{12}$、$s_{21}$实际上有较大差别，甚至在老师的帮助下依然存在。有理由怀疑实验仪器本身的不稳定型造成了数据的误差。
-\end{enumerate}
-\item \textbf{微波材料的隐身特性与材料的涂覆厚度有关，试计算本实验测得的微波材料涂覆在金属平板上，微波垂直入射时反射系数随材料厚度以及频率的变化，考察材料厚度对隐身性能的影响。}\\
-从教材$^{\cite{jiaocai}}$实验11.3可知，对于涂覆在金属平板（假定其为理想导体）表面的单层吸波材料，空气与涂层界面处的输入阻抗为：
-\begin{equation}
-Z = Z_0\sqrt{\cfrac{\mu_r}{\varepsilon_r}}\tanh(\gamma d)
-\end{equation}
-其中$Z_0 = \sqrt{\frac{\mu_0}{\varepsilon_0}} = 377\Omega$是自由空间波阻抗，$\gamma$为电磁波在涂层中的传播常数，$d$为吸波涂层厚度，$\mu_r$,$\varepsilon_r$分别为涂层的相对介电常数和磁导率。
-\begin{figure}[H]
-\centering
-\includegraphics[width=12cm]{fig/skt.pdf}\\
-\caption{反射系数随涂层厚度、频率的变化}\label{skt}
-\end{figure}
-当电磁波由空气向涂层垂直入射时，在界面上的反射系数为：
-\begin{equation}
-\Gamma = \cfrac{Z-Z_0}{Z+Z_0}
-\end{equation}
-因此我们使用python对1mm-3mm厚度的图层、26.5MHz-40MHz频率的电磁波对应的反射系数$\Gamma$计算并作图，结果如图(\ref{skt})：
-\end{enumerate}
+\subsection{本实验测得材料的介电常数和磁导率其主要误差来源是什么？}
+\subsection{微波材料的隐身特性与材料的涂覆厚度有关，试计算本实验测得的微波材料涂覆在金属平板上，微波垂直入射时反射系数随材料厚度以及频率的变化，考察材料厚度对隐身性能的影响。}
 
 \nocite{jiaocai}
 \bibliography{ref}

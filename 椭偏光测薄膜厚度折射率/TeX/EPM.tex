@@ -133,48 +133,15 @@ $\Phi$exp(deg) & $\Delta$exp(deg) & $\Phi$mod(deg) & $\Delta$mod(deg) &         
 \end{table}
 
 \section{实验讨论}
+\iffalse
 \subsection{薄膜厚度}
 我们测得的薄膜厚度为102.55nm，相比其他实验者的数据略为偏大。我们考虑的可能原因是我们用手取出样品，手上的油污沾染了样品表面，使得测得厚度变大。
+\fi
 
 \section{思考题}
 \subsection{椭偏参数$\Psi$,$\Delta$的物理含义是什么？消光时，它们与起偏器、检偏器方位角$P$,$A$之间由什么样的表达式？}
-由前文，$\tan\Psi$表征了p波和s波经薄膜系统反射后的振幅变化，$\Delta$表征其相位差($\theta_p - \theta_s$)的变化。
-
-结合这两个量可以直接得到反射前后光的偏振状态的变化。消光时，需要满足如下两个条件：
-$$\Psi=|A|$$
-$$\Delta=\left\{\begin{aligned}&270^\circ-2P,&A>0\\&90^\circ-2P,&A<0\end{aligned}\right.$$
-
-%\subsection{椭偏测量中，若被测量薄膜厚度超过一个周期，试提出确定周期数的其他方法。若测出的周期数为$N$，写出薄膜总厚度的表达式。计算SiO$_2$薄膜刚好为一个周期时的厚度。}
 \subsection{椭偏测量中，若被测量薄膜厚度超过一个周期，试提出确定周期数的其他方法。}
-其他方法：可以换用不同波长的激光进行测量，或是换做其他入射角进行测量，对比多组结果从而确定周期数。
-\iffalse
-若周期数为$N$，按照本实验的操作测得薄膜厚度为$d_\text{measure}$，那么实际薄膜的总厚度为$d_\text{measure}+Nd$，其中$d$为薄膜厚度刚好为一个周期时的厚度，计算如下。
-
-根据之前的推导，相邻两束光的相位差为$2\delta$，其中
-$$\begin{aligned}\delta&=\frac{2\pi dn_2}{\lambda}\cos\phi_2\\
-&=\frac{2\pi dn_2}{\lambda}\sqrt{1-\frac{n_1^2}{n_2^2}\sin^2\phi_1}\\
-&=\frac{2\pi d}{\lambda}\sqrt{n_2^2-n_1^2\sin^2\phi_1}\end{aligned}.$$
-本实验所采用的是氦氖激光器，其激光波长为632.8nm，$n_1$为空气折射率近似为1，$n_2$为样品折射率取1.4722,$\phi_1$为入射角取70$^\circ$。当恰好为一个周期时，$\delta=\pi$，从而有
-$$d=\frac{\lambda}{2\sqrt{n_2^2-n_1^2\sin^2\phi_1}}=279.2\text{nm}.$$
-\fi
-\iffalse
-\subsection{用自动椭偏仪测量薄膜厚度时，总结出作图查表法的实验步骤。}
-\begin{enumerate}
-\item 对于作图法：
-\begin{enumerate}
-\item 模式选为作图法进行测量，软件界面出现一个红点；
-\item 逐渐提高精度和放大倍数，画线直到曲线经过红点，得到薄膜厚度；
-\item 切换模式，重复上面一步，得到折射率。
-\end{enumerate}
-\item 对于查表法：
-\begin{enumerate}
-\item 模式选为查表法进行测量；
-\item 重复计算，知道误差小于所指定的误差，得到薄膜厚度与折射率。
-\end{enumerate}
-\end{enumerate}
-\fi
 \subsection{试分析本实验测量中系统误差的来源。}
-薄膜表面不干净，光路调节不好，桌面扰动都会产生测量的系统误差。
 
 \nocite{jiaocai}
 \bibliography{ref}

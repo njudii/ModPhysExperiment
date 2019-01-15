@@ -1,32 +1,9 @@
 % !Mode:: "TeX:UTF-8"
 % !TEX program  = xelatex
 \documentclass[a4paper]{article}
-%\usepackage{savesym}
 \usepackage{amsmath}
 \usepackage{amssymb}
-%\savesymbol{acute}
-%\savesymbol{grave}
-%\savesymbol{ddot}
-%\savesymbol{tilde}
-%\savesymbol{bar}
-%\savesymbol{breve}
-%\savesymbol{check}
-%\savesymbol{hat}
-%\savesymbol{dot}
-%\savesymbol{mathring}
-%\usepackage{accents}
-%\restoresymbol{AC}{acute}
-%\restoresymbol{AC}{grave}
-%\restoresymbol{AC}{ddot}
-%\restoresymbol{AC}{tilde}
-%\restoresymbol{AC}{bar}
-%\restoresymbol{AC}{breve}
-%\restoresymbol{AC}{check}
-%\restoresymbol{AC}{hat}
-%\restoresymbol{AC}{dot}
-%\restoresymbol{AC}{mathring}
 \usepackage{ctex}
-\usepackage{CJK,CJKfntef}
 %\usepackage{braket}
 %\usepackage[european]{circuitikz}
 %\usepackage{multirow}
@@ -158,22 +135,19 @@ n_R = n(\omega)+\frac{eB}{2m_e}\frac{\text{d}n}{\text{d}\omega}\label{eq10}
 \section{实验数据}
 
 \section{误差分析}
+\iffalse
 \begin{enumerate}
 \item 消光法测量时光电流反应不够灵敏，最小值不够准确，导致对应的检偏器角度读取有误差。
 \item 光路不满足实验要求，精度不够导致测量不准确。
 \item 读数有一定误差。综合导致测量点不再一条直线上。
 \end{enumerate}
+\fi
 
 \section{思考题}
 \subsection{材料的法拉第效应的大小与哪些因素有关？}
-与磁场强度，材料的厚度，材料的费尔得常数有关。三者越大，法拉第效应越明显。
 \subsection{简述本实验测定法拉第转角所采用的试验方法？}
-光在通过偏振片时，不同的偏振方向上的光吸收程度不同，偏振方向与入射光线平行时光通过最，
-与入射光线垂直时光线被阻挡。本实验寻找电流最小的角度，通过计算旋转的角度求出法拉第转。
 \subsection{本实验的法拉第效应和透明磁性材料的法拉第效应有何异同?}
-磁性材料在磁场的作用下自身发生极化产生磁场叠加。所以磁性材料的法拉第效应较强。
 \subsection{有些材料除了有法拉第旋光效应以外，还有自然旋光，双折射现象，它们会影响本实验测量的准确度，用什么方法可以消除这些因素的影响？}
-自然旋光是可逆的，光线往返一周，累积旋光角为0，所以让光线在样品中往返一周可以减少自然旋光的影响；让光线尽量垂直入射到样品表面可以减少双折射现象的影响。
 
 \nocite{jiaocai}
 \bibliography{ref}

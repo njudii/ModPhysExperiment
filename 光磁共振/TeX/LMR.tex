@@ -3,6 +3,7 @@
 \documentclass[a4paper]{article}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage[page]{appendix}
 \usepackage{bm}
 \usepackage{ctex}
 \usepackage{caption}
@@ -155,51 +156,22 @@ B_{\text{地}} &=& \sqrt{B^2_{\text{地水平}} + B^2_{\text{地垂直}}}\label{
 
 \section{思考题}
 \subsection{$^{87}$Rb的基态$F=1$与$F=2$的塞曼子能级排列相反，$^{85}$Rb的基态$F=2$与$F=3$的塞曼子能及排列也相反，是何原因？}
-\begin{enumerate}
-\item 对$^{87}$Rb而言\\
-将$F=1$，$I=\frac{3}{2}$，$J=-\frac{1}{2}$代入(\ref{eq3})式得$g_F=-\frac{1}{2}g_J$，将$F=2$，$I=\frac{3}{2}$，$J=\frac{1}{2}$代入(\ref{eq3})式得$g_F=\frac{1}{4}g_J$，所以$F=1$与$F=2$时$g_F$符号相反，即塞曼子能级排列相反；
-\item 对$^{85}$Rb而言\\
-将$F=3$，$I=\frac{5}{2}$，$J=\frac{1}{2}$代入(\ref{eq3})式得$g_F=\frac{1}{6}g_J$，将$F=3$，$I=\frac{5}{2}$，$J=\frac{1}{2}$代入(\ref{eq3})式得$g_F=-\frac{1}{4}g_J$，所以$F=3$与$F=2$时$g_F$符号相反，即塞曼子能级排列相反。
-\end{enumerate}
 \subsection{测量$g_F$值时，将水平换向得到的频率为$\nu = \frac{\nu_1+\nu_2}{2}$，为什么不是$\nu = \frac{\nu_1-\nu_2}{2}$？必须满足的条件是什么？测地磁场水平分量时，得到的频率为什么是$\nu = \frac{\nu_1-\nu_3}{2}$？相应的条件又是什么？}
-\begin{enumerate}
-\item 测量$g_F$时，水平换向前，有共振条件
-\begin{equation*}
-h\nu_1 = B_{\text{水平}}+B_{\text{扫}}+B_{\text{地水平}}
-\end{equation*}
-水平换向后，有
-\begin{equation*}
-h\nu_2 = B_{\text{水平}}-B_{\text{扫}}-B_{\text{地水平}}
-\end{equation*}
-两式相加消去$B_{\text{扫}}$和$B_{\text{地水平}}$，故得到的频率为$\nu = \frac{\nu_1+\nu_2}{2}$
-
-必须满足的条件是，$B_{\text{水平}}>B_{\text{扫}}+B_{\text{地水平}}$。
-\item 测量$B_{\text{地水平}}$时，水平换向前，有共振条件
-\begin{equation*}
-h\nu_1 = B_{\text{水平}}+B_{\text{扫}}+B_{\text{地水平}}
-\end{equation*}
-水平换向后，有
-\begin{equation*}
-h\nu_2 = B_{\text{水平}}+B_{\text{扫}}-B_{\text{地水平}}
-\end{equation*}
-两式相减消去$B_{\text{水平}}$和$B_{\text{扫}}$，故得到的频率为$\nu = \frac{\nu_1+\nu_2}{2}$。
-
-必须满足的条件是，$B_{\text{水平}}+B_{\text{扫}}>B_{\text{地水平}}$。
-\end{enumerate}
 \subsection{为什么实验要在抵消地磁场垂直分量的状态下进行？}
-地磁场的垂直分量对光抽运信号有很大影响，当垂直磁场跟地磁场的垂直分量完全抵消时，示波器上出现最佳光抽运信号。
 \subsection{扫场在实验中的作用是什么？}
-扫描场的作用就是是使光抽运反复出现，以便于实验观测。
 \subsection{为什么射频磁场必须在竖直方向，跟产生塞曼子能级的稳定弱磁场相垂直？}
-这样可以防止光抽运造成的偏极化，使原子趋向均衡分布，平衡感应光和光抽运这两个相反的过程。垂直方向的射频场为线偏振场，可分解为一右旋和一左旋圆偏振场，为满足角动量守恒，只是与原子磁矩作拉莫尔进动同向的那个圆偏振场起作用。
 \subsection{如果射频信号频率是相邻塞曼子能级间隔的两倍，能否产生由$m_F = +2$到$m_F = 0$的磁共振？为什么？}
-不能，违反了跃迁的选择定则$gm_F=\pm 1$。
 
-\section*{附录\quad 亥姆霍兹线圈轴中心处磁感应强度B的计算公式}
+
+\section*{附录}
+
+\begin{appendix}
+\section{亥姆霍兹线圈轴中心处磁感应强度B的计算公式}
 \begin{equation}
 B = \frac{16\pi}{5^{\frac{3}{2}}}\frac{NU}{rR}\times 10^{-7}\text{T}\label{eq9}
 \end{equation}
 式中：N为线圈每边匝数；R为线圈线绕电阻($\Omega$)；r为线圈有效半径(m)；U为线圈上加的直流电压(V)。其中各线圈的N，r，R等参数实验室已给出，U由数字电压表读出。
+\end{appendix}
 
 \nocite{jiaocai}
 \bibliography{ref}
