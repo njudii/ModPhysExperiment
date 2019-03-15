@@ -24,9 +24,10 @@ Heads up!
 
  - 如果需要LaTeX相关的帮助，请查看 [软件教学系列的文章](https://itxia.github.io/categories/%E8%BD%AF%E4%BB%B6%E6%95%99%E5%AD%A6%E7%B3%BB%E5%88%97/)。
 
- - 中文路径的问题：vscode+LaTeX workshop编译含有中文路径的文件会有问题，解决办法有两个：
-   1. 用sublime+LaTeX Tools
-   2. 修改vscode的settings.json的下列段落中的``DOC``为``DOCFILE``，修改后的段落如下（此方法来自[这个项目的FAQ](https://github.com/James-Yu/LaTeX-Workshop)）：
+ - 中文路径的问题：vscode+LaTeX workshop编译含有中文路径的文件会有问题，解决办法有三个：
+   1. 把中文路径名改成英文
+   2. 用sublime+LaTeX Tools
+   3. 修改vscode的settings.json的下列段落中的``DOC``为``DOCFILE``，修改后的段落如下（此方法来自[这个项目的FAQ](https://github.com/James-Yu/LaTeX-Workshop)）：
    
    ```
    "latex-workshop.latex.tools": [
