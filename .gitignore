@@ -17,3 +17,6 @@ data/
 *.zip
 *.txt
 *.dat
+
+# for OS X
+*.DS_Store
