@@ -12,6 +12,12 @@
 \usepackage{graphicx}
 \usepackage{geometry}
 \geometry{left=2.5cm,right=2.5cm,bottom=2.5cm,top=2.5cm}
+\usepackage{physics}
+\usepackage{mhchem}
+\usepackage{siunitx}
+\usepackage{bm}
+
+
 \title{近代物理实验报告9.2：微波段电子自旋共振}
 \author{xy\quad 学号\quad 匡亚明学院}
 \date{2019年2月29日}
@@ -21,12 +27,12 @@
 %--------main-body------------
 
 \section{引言}
-电子自旋共振（Electron Spin Resonance，简称ESR)也称电子顺磁共振 (Electron Paramagnetic Resonance)，是1944年由扎伏伊斯基首先观测到的，它是磁共振波谱学的一个分支。在探索物质中末偶合电子以及它们与周围原子相互作用方面，顺磁共振具有很高的灵敏度和分辨率，并且具有在测量过程中不破坏样品结构的优点。目前它在化学，物理，生物和医学等领域都获得了广泛的应用。
+电子自旋共振(Electron Spin Resonance，简称ESR)也称电子顺磁共振(Electron Paramagnetic Resonance)，是1944年由扎伏伊斯基首先观测到的，它是磁共振波谱学的一个分支。在探索物质中末偶合电子以及它们与周围原子相互作用方面，顺磁共振具有很高的灵敏度和分辨率，并且具有在测量过程中不破坏样品结构的优点。目前它在化学，物理，生物和医学等领域都获得了广泛的应用。
 
 \section{实验目的}
 \begin{enumerate}
 \item 本实验的目的是在了解电子自旋共振原理的基础上,学习用微波频段检测电子自旋共振信号的方法。
-\item 测定CuSO$_4\cdot$5H$_2$O单晶体、DPPH中电子的g因子和共振线宽。
+\item 测定$\ce{CuSO_4 . 5H_2O}$单晶体、DPPH中电子的g因子和共振线宽。
 \item 了解、掌握微波仪器和器件的应用。
 \item 学习利用锁相放大器进行小信号测量的方法。
 \end{enumerate}
@@ -35,51 +41,52 @@
 励磁线圈、特斯拉计、调制信号发生器、锁相放大器。
 
 \section{实验原理}
-电子自旋共振研究的对象是有未偶电子（即未成对电子）的物质，如具有奇数个电子的原子和分子，内电子壳层未被填满的原子和离子，受辐射或化学反应生成的自由基以及固体缺陷中的色心和半导体、金属等。通过对物质的自旋共振谱的研究，可以了解有关原子，分子及离子中未偶电子的状态及周围环境方面的信息，从而获得有关物质结构的知识。例如对固体色心的自旋共振的研究，从谱线的形状、线宽及g因子，可以估算出缺陷的密度，了解缺陷的种类，缺陷上电子与电子的相互作用，电子与晶格的相互作用的性质等。
-电子自旋共振可以研究电子磁矩与外磁场的相互作用，通常发生在波谱中的微波波段, 而核磁共振(NMR)一般发生在射频范围。在外磁场的作用下的能级发生分裂，通常认为是塞曼效成所引起的。因可以说ESR是研究电子塞曼能级间的直接跃迁，而NMR则是研究原子和塞曼能级间直接的跃迁。也就是说，ESR和NMR是分别研究电子自旋磁矩和核磁矩在外磁场中磁化动力学行为。
+电子自旋共振研究的对象是有未偶电子（即未成对电子）的物质，如具有奇数个电子的原子和分子，内电子壳层未被填满的原子和离子，受辐射或化学反应生成的自由基以及固体缺陷中的色心和半导体、金属等。通过对物质的自旋共振谱的研究，可以了解有关原子，分子及离子中未偶电子的状态及周围环境方面的信息，从而获得有关物质结构的知识。例如对固体色心的自旋共振的研究，从谱线的形状、线宽及g因子，可以估算出缺陷的密度，了解缺陷的种类，缺陷上电子与电子的相互作用，电子与晶格的相互作用的性质等。\\
+电子自旋共振可以研究电子磁矩与外磁场的相互作用，通常发生在波谱中的微波波段, 而核磁共振(NMR)一般发生在射频范围。在外磁场的作用下的能级发生分裂，通常认为是塞曼效成所引起的。因可以说ESR是研究电子塞曼能级间的直接跃迁，而NMR则是研究原子和塞曼能级间直接的跃迁。也就是说，ESR和NMR分别研究电子自旋磁矩和核磁矩在外磁场中的磁化动力学行为。
 \subsection{电子自旋磁偶极矩}
-电子自旋磁偶极矩p和自旋磁《1 m的关系是$\mu = \mu_0m$。其自旋磁偶极矩与角动量之比称为旋磁比$\gamma$，其表达式为
+电子自旋磁偶极矩$ \mu $和自旋磁矩$ m $的关系是$\mu = \mu_0 m$。其自旋磁偶极矩与角动量之比称为旋磁比$\gamma$，其表达式为
 \begin{equation}
-\gamma = \mu_0g\left(\cfrac{|e|}{2m_e}\right)\label{eq1}
+\gamma = \mu_0\dfrac{|e|}{2m_e}       \label{eq1}
 \end{equation}
-因此，电子自旋磁偶极矩沿磁场H方向的分量应该写为
+因此，电子自旋磁偶极矩沿磁场$ \vb{H} $方向的分量应该写为
 \begin{equation}
-\mu_z = -\gamma\hbar m_s = g\left(\cfrac{\mu_0|e|}{2m_e}\right) = -h\mu_B m_s\label{eq2}
+\mu_z = -\gamma\hbar m_s = -g\dfrac{\mu_0|e|}{2m_e}\hbar m_s = -g\mu_B m_s       \label{eq2}
 \end{equation}
-式中为电子自旋角动量的z分量量子数,$\mu_B$为玻尔磁子。
-由于自旋角动量取向的空间量子化，必将导致磁矩体系能级的空间量子化。即得一组在磁场中电子自旋此举的能量值为
+式中$ m_s $为电子自旋角动量的$ z $分量量子数，$\mu_B = \dfrac{\mu_0 e \hbar}{2m_e}$为玻尔磁子，在SI单位制中，$ \mu_B = \SI{1.165e-31}{J/T} $。\\
+由于自旋角动量取向的空间量子化，必将导致磁矩体系能级的空间量子化。即得一组在磁场中电子自旋磁矩的能量值为
 \begin{equation}
-E = g\mu_B Hm_s\label{eq3}
+E = g\mu_B Hm_s      \label{eq3}
 \end{equation}
 这说明塞曼能级间的裂距$g\mu_BH$是随磁场强度线性增大的，如图(\ref{fig1})所示。
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=10cm]{fig/fig1.jpg}\\
 \caption{电子自旋能级与磁场强度的关系}\label{fig1}    
 \end{figure}
-\subsection{电子自旋磁偶极矩$\mu$在磁场H中的运动}
-电子自旋磁矩绕磁场H的进动方程为
+
+\subsection{电子自旋磁偶极矩$\mu$在磁场$ \vb{H} $中的运动}
+电子自旋磁矩绕磁场$ \vb{H} $的进动方程为
 \begin{equation}
-\cfrac{\text{d}\mu}{\text{d}t} = -\gamma\mu\times H\label{eq6}
+\dv{\bm\mu}{t} = -\gamma\mu\cross \vb{H}          \label{eq6}
 \end{equation}
 上式的解为
 \begin{equation}
-\mu_x = a\cos\omega_0t\text{, }\mu_y = a\sin\omega_0t\text{, }
-mu_z = Const\label{eq38}
+\mu_x = a\cos\omega_0 t  \text{, }  \mu_y = a\sin\omega_0 t  \text{, }
+mu_z = Const.    \label{eq38}
 \end{equation}
-式中$\omega_0 = \gamma H_0$。上式表征了磁偶极矩$\mu$与磁场$H_0$保恃一定的角度绕Z轴做Larmor进动, 其进动的角频率为$\omega_0 = \gamma H_0$。如图(\ref{fig2})所示。
-\begin{figure}[!h]
+式中$\omega_0 = \gamma H_0$。上式表征了磁偶极矩$\mu$与磁场$H_0$保恃一定的角度绕$ z $轴做Larmor进动, 其进动的角频率为$\omega_0 = \gamma H_0$。如图(\ref{fig2})所示。
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm]{fig/fig2.jpg}\\
 \caption{电子自旋磁矩在外场中的运动}\label{fig2}
 \end{figure}
-如果在垂直于恒定磁场H的平面内加进一个旋转磁场$\tilde{h}$,若此旋转磁场的旋转方向和进动方向相冋，当$\tilde{h}$的旋转角频率$\omega = \omega_0$时，$\mu$和$\tilde{h}$保持相对静止。于是$\mu$也将受到一个力矩的作用，绕$\tilde{h}$做进动，结果是$\mu$与$H_0$之间的夹角增大，说明例子吸收了来自旋转磁场$\tilde{h}$的势能，这就发生了电子顺磁共振现象，共振条件：
+如果在垂直于恒定磁场$ \vb{H} $的平面内加进一个旋转磁场$\tilde{\vb{h}}$,若此旋转磁场的旋转方向和进动方向相冋，当$\tilde{\vb{h}}$的旋转角频率$\omega = \omega_0$时，$\bm\mu$和$\tilde{\vb{h}}$保持相对静止。于是$\bm\mu$也将受到一个力矩$ -\bm\mu\cross\tilde{\vb{h}} $的作用，绕$\tilde{\vb{h}}$做进动，结果是$\bm\mu$与$\vb{H}_0$之间的夹角增大，说明例子吸收了来自旋转磁场$\tilde{\vb{h}}$的势能，这就发生了电子顺磁共振现象，共振条件：
 \begin{equation}
-\omega_0 = \omega = \gamma H_0 = \left(\cfrac{g\mu_B}{\hbar}\right)H_0\label{eq9}
+\omega_0 = \omega = \gamma H_0 = \dfrac{g\mu_B}{\hbar}H_0\label{eq9}
 \end{equation}
 由此
 \begin{equation}
-h\nu = g\mu_BH_0\label{eq10}
+h\nu = g\mu_BH_0             \label{eq10}
 \end{equation}
 \subsection{电子自旋的量子力学描述}
 自旋为S的电子
