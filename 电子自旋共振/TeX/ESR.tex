@@ -89,58 +89,65 @@ mu_z = Const.    \label{eq38}
 h\nu = g\mu_BH_0             \label{eq10}
 \end{equation}
 \subsection{电子自旋的量子力学描述}
-自旋为S的电子
+自旋为$ S $的电子
 \begin{equation}
-\mu_e = -g\mu_BS\label{eq11}
+\mu_e = -g\mu_BS             \label{eq11}
 \end{equation}
 分裂的能级间隔为：
 \begin{equation}
-\Delta E = g\mu_B H\label{eq12}
+\Delta E = g\mu_B H          \label{eq12}
 \end{equation}
-当外加一个频率为$\nu$的交变磁场$\tilde{h}$，当满足条件：
+当外加一个频率为$\nu$的交变磁场$\tilde{\vb{h}}$，当满足条件：
 \begin{equation}
-h\nu = \Delta E = g\mu_B H\label{eq13}
+h\nu = \Delta E = g\mu_B H   \label{eq13}
 \end{equation}
-时，就会发生共振吸收。
-g=2时，计算得共振频率为$\nu$ = 9.51GHz
+时，就会发生共振吸收。\\
+g=2时，计算得共振频率为
+\begin{equation}\label{key}
+\nu = \SI{9.51}{GHz}
+\end{equation}
+
 \subsection{自旋弛豫}
-上述的自旋共振吸收或发射的信号，只有当两个自旋能级间的粒子数存在差别时，才能检测到。由于电子在能级$E_{\alpha}(m_s = \frac{1}{2})$和$E_{\beta}(m_s = -\frac{1}{2})$间的跃迁，才能产生吸收或发射过程。这两个过程的速率与态的布居、微波能量密度以及跃迁矩阵元的平方成正比。垂直于稳定磁场$H_0$的微波振荡磁场(h$\nu$)可感应出两种形式的跃迁：从低能级($E_{\alpha}$)跃迁至高能级($E_{\beta}$)的过程是吸收能量，反之是辐射能量。由于低能级的粒子数较多，两个过程相抵的结果，吸收胜于辐射，结果是净吸收能量。这种由于微波振荡磁场所引起的跃迁称为“受激跃迁”。其结果必将导致各能级的布居数发生变化。
+上述的自旋共振吸收或发射的信号，只有当两个自旋能级间的粒子数存在差别时，才能检测到。由于电子在能级$E_{\alpha}(m_S = \frac{1}{2})$和$E_{\beta}(m_S = -\frac{1}{2})$间的跃迁，才能产生吸收或发射过程。这两个过程的速率与态的布居、微波能量密度以及跃迁矩阵元的平方成正比。垂直于稳定磁场$H_0$的微波振荡磁场($h\nu$)可感应出两种形式的跃迁：从低能级($E_{\alpha}$)跃迁至高能级($E_{\beta}$)的过程是吸收能量，反之是辐射能量。由于低能级的粒子数较多，两个过程相抵的结果，吸收胜于辐射，结果是净吸收能量。这种由于微波振荡磁场所引起的跃迁称为“受激跃迁”。其结果必将导致各能级的布居数发生变化。
 
 我们知道，当外磁场加在自旋为$\frac{1}{2}$的体系时，其能级将分裂成两个分量：
 \begin{equation}
-E = \pm\frac{1}{2}g\mu_B H\label{eq14}
+E = \pm\dfrac{1}{2}g\mu_B H         \label{eq14}
 \end{equation}
 用$n_{\alpha}$和$n_{\beta}$表示上下能级的布居数。当自旋体系与晶格处于热力学平衡状态时，电子是按玻尔兹曼规律分布在两能级间，即：
 \begin{equation}
-\cfrac{n_{\alpha}}{N_{\beta}} = e^{\frac{-\Delta E}{k_BT}} = e^{\frac{-g\mu_B H}{k_BT}}\label{eq15}
+\dfrac{n_{\alpha}}{N_{\beta}} = e^{-\Delta E/k_BT} = e^{-g\mu_B H/k_BT}                        
+\label{eq15}
 \end{equation}
 设
 \begin{equation*}
-N = (n_{\beta} + n_{\alpha})\text{, }n = (n_{\beta} - n_{\alpha})
+N = (n_{\beta} + n_{\alpha})  \text{, }  n = (n_{\beta} - n_{\alpha})
 \end{equation*}
-设此自旋体系受微波场辐照时，其向上和向下的受激跃迁概率均为P，则$\ket{\beta}$态布居数的变化率写成
+设此自旋体系受微波场辐照时，其向上和向下的受激跃迁概率均为$ P $，则$\ket{\beta}$态布居数的变化率写成
 \begin{equation}
-\cfrac{\text{d}n_{\beta}}{\text{d}t} = P(n_{\alpha} - n_{\beta}) = -Pn\label{eq18}
+\dv{n_{\beta}}{t} = P(n_{\alpha} - n_{\beta}) = -Pn
+\label{eq18}
 \end{equation}
 即
 \begin{equation}
-\cfrac{\text{d}n}{\text{d}t} = -2Pn\label{eq19}
+\dv{n}{t} = -2Pn        \label{eq19}
 \end{equation}
 解得
 \begin{equation}
-n = n(0)e^{-2Pt}\label{eq20}
+n = n(0)e^{-2Pt}        \label{eq20}
 \end{equation}
 因此，从辐射场吸收能量的速率为：
 \begin{equation}
-\cfrac{\text{d}E}{\text{d}t} = n_{\beta}P(E_{\alpha} - E_{\beta}) + n_{\alpha}(E_{\beta} - E_{\alpha}) = nP\Delta E\label{eq21}
+\dv{E}{t} = n_{\beta}P(E_{\alpha} - E_{\beta}) + n_{\alpha}P(E_{\beta} - E_{\alpha}) = nP\Delta E
+\label{eq21}
 \end{equation}
-式(\ref{eq20})表明，虽然起始的布居差值为n(0)，但加上微波共振场的结果，将使这差值按指数规律衰减，乃至上下能级的布居数相等，即所谓饱和。式(\ref{eq21})表明，只有n为有限数值时，才能从辐射场吸收能量。换言之，当两能级的不成对电子的布居数变成相等后，如果没有其它的相互作用，此后就不能观察到微波能量的净吸收，即不呈现ESR信号。
+式(\ref{eq20})表明，虽然起始的布居差值为$ n(0) $，但加上微波共振场的结果，将使这差值按指数规律衰减，乃至上下能级的布居数相等，即所谓饱和。式(\ref{eq21})表明，只有$ n $为有限数值时，才能从辐射场吸收能量。换言之，当两能级的不成对电子的布居数变成相等后，如果没有其它的相互作用，此后就不能观察到微波能量的净吸收，即不呈现ESR信号。
 
 实际上，我们通常所观察到的ESR信号并非瞬态的，而是稳定的。这说明自旋体系微波场辐射时，不仅发生“受激跃迁”，同时还有其它的相互作用存在，使其从不平衡状态恢复至平衡状态，这样才可能保持稳定的ESR信号。这种恢复平衡的过程称为弛豫过程。由于回复平衡通常是以指数过程，因此，用弛豫时间来表征恢复平衡的速率。弛豫现象之所以引起重视，是因为谱线形状与弛豫机理是分不开的。从分析线型可以测定许多动力学过程的速率，若用其他方法该速率难以获得。
 
 \section{实验内容}
 \subsection{观察电子自旋共振吸收现象}
-测量DPPH样品，用示波器观测共振吸收峰。调节电源励磁电流，改变磁场B，使其出现共振信号。分别改变B和大幅度调制场$\tilde{B}$的大小，观察信号的变化。调节得到等间隔的共振吸收峰。
+测量DPPH样品，用示波器观测共振吸收峰。调节电源励磁电流，改变磁场$ B $，使其出现共振信号。分别改变$ B $和大幅度调制场$\tilde{B}$的大小，观察信号的变化。调节得到等间隔的共振吸收峰。
 
 \section{注意事项}
 \begin{enumerate}
@@ -178,11 +185,11 @@ g_2 = \cfrac{h\nu}{\mu_B H} = \cfrac{6.626\times 10^{-34}\times 9.37\times 10^{9
 \end{figure}
 
 \section{思考题}
-\subsection{测g值时，为什么要使共振信等间距？怎样使信号等间距？}
+\subsection{测$ g $值时，为什么要使共振信等间距？怎样使信号等间距？}
 \subsection{$B_0$，$\tilde{B}$如何产生？作用是什么？}
 \subsection{不加扫描电压能否观察到共振信号？}
 \subsection{如果电脑显示的锁定放大器输出波形反相了，会是哪些原因？}
-\subsection{能否用固定$B_0$，改变$\nu$的方法来测量g及B？试推导出计算公式。}
+\subsection{能否用固定$B_0$，改变$\nu$的方法来测量$ g $及$ B $？试推导出计算公式。}
 
 \nocite{jiaocai}
 \bibliography{ref}
