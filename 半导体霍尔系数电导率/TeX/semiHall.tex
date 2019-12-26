@@ -13,6 +13,8 @@
 \usepackage{geometry}
 \usepackage{bm}
 \geometry{left=2.5cm,right=2.5cm,bottom=2.5cm,top=2.5cm}
+\usepackage{physics}
+\usepackage{siunitx}
 \title{近代物理实验：半导体的霍尔系数与电导率测量}
 \author{ 姓名\quad 学号\quad 匡亚明学院}
 \date{}
@@ -22,7 +24,7 @@
 	%--------main-body------------
 	
 \section{引言}
-1879年，霍尔（E.H.Hall）研究通有电流的导体在磁场中受力时，发现在垂直于磁场和电流的方向上产生了电动势，这个电磁效应称为“霍尔效应”。在半导体材料中，霍尔效应比在金属中大几个数量级，引起人们对它的深入研究。霍尔效应的研究在半导体理论的发展中起了重要的推动作用。直到现在，霍尔效应的测量仍是研究半导体性质的重要实验方法。利用霍尔系数和电导率的联合测晕，可以用来研究半导体的导电机构（本征导电和杂质导电）、散射机构（晶格散射和杂质散射），并可以确定半导体的一些基本参数，如：半导体材料的导电类型、载流子浓度、迁移率大小、禁带宽度、杂质电离能等。利用霍尔效应制成的元件，称为霍尔元件，也已广泛地用千测试仪器和自动控制系统中。
+1879年，霍尔(E.H.Hall)研究通有电流的导体在磁场中受力时，发现在垂直于磁场和电流的方向上产生了电动势，这个电磁效应称为“霍尔效应”。在半导体材料中，霍尔效应比在金属中大几个数量级，引起人们对它的深入研究。霍尔效应的研究在半导体理论的发展中起了重要的推动作用。直到现在，霍尔效应的测量仍是研究半导体性质的重要实验方法。利用霍尔系数和电导率的联合测晕，可以用来研究半导体的导电机构（本征导电和杂质导电）、散射机构（晶格散射和杂质散射），并可以确定半导体的一些基本参数，如：半导体材料的导电类型、载流子浓度、迁移率大小、禁带宽度、杂质电离能等。利用霍尔效应制成的元件，称为霍尔元件，也已广泛地用千测试仪器和自动控制系统中。
 
 \section{实验目的}
 \begin{enumerate}
@@ -65,7 +67,7 @@ I_x=q\cdot p\cdot v_x\cdot ab
 \end{equation}
 将式(\ref{6.1.5})的$v_x$代入式(\ref{6.1.4})得霍尔电压
 \begin{equation}\label{6.1.6}
-U_H=(\frac{1}{q\cdot p})\frac{I_x\cdot B_z}{b}
+U_H=\qty(\frac{1}{q\cdot p})\frac{I_x\cdot B_z}{b}
 \end{equation}
 由式(\ref{6.1.1})、(\ref{6.1.3})、(\ref{6.1.5})得霍尔系数
 \begin{equation}\label{6.1.7}
@@ -103,15 +105,16 @@ R_H=\frac{A(p\mu_p^2-n\mu_n^2)}{q(p\mu_p+n\mu_n)^2}=\frac{A(p-nb^2)}{q(p+nb)^2}
 \begin{equation}\label{6.1.12}
 \mu_H=|R_H|\cdot \sigma
 \end{equation}
-$\mu_H$的量纲与载流子的迁移率相同，通常为cm$^2$/V$\cdot$s(厘米$^2$/伏$\cdot$秒)，它的大小与载流子的“漂移（或电导）迁移率”有密切的关系。
+$\mu_H$的量纲与载流子的迁移率相同，通常为$ \si{cm^2/V.s} $%(厘米$^2$/伏$\cdot$秒)
+，它的大小与载流子的“漂移（或电导）迁移率”有密切的关系。
 
 霍尔系数$R_H$可以在实验中测量出来，若采用国际单位制，由式(\ref{6.1.6})、(\ref{6.1.7})可得
 \begin{equation}\label{6.1.13}
-R_H=\frac{U_H \cdot b}{I_x \cdot B_z}(\text{m}^3/\text{C})
+R_H=\frac{U_H \cdot b}{I_x \cdot B_z} \quad (\si{m^3/C})
 \end{equation}
 但在半导体学科中习惯采用实用单位制（其中，$b$：厘米，$B_z$：高斯G），则
 \begin{equation*}
-R_H=\frac{U_H \cdot b}{I_x \cdot B_z}\times 10^8(\text{cm}^3/\text{C})
+R_H=\frac{U_H \cdot b}{I_x \cdot B_z} \quad (10^8\si{cm^3/C})
 \end{equation*}
 
 \subsection{霍尔系数与温度的关系}
@@ -160,7 +163,7 @@ R_{HM}=-\frac{A}{qN_A}\cdot \frac{(b-1)^2}{4b}
 
 在本征激发区，本征激发产生的电子浓度近似等于空穴浓度，且远远超过杂质离化产生的载流子浓度，有$p\approx n$，载流子浓度 $n$与$T$、$E_g$有以下关系：
 \begin{equation*}
-n\propto T^{\frac{3}{2}} \exp(-\frac{E_g}{2kT})
+n\propto T^{3/2} \exp(-\frac{E_g}{2kT})
 \end{equation*}
 式中$E_g$为禁带宽度，$k$为波尔兹曼常数，$T$为绝对温度。此时$\sigma=qn(\mu_n+\mu_p)$，由于迁移率与$T^{-3/2}$成正比，所以$\ln\sigma$与$E_g/2kT$成正比。因此在本征激发范围，由$\ln\sigma \sim 1/T$曲线的斜率可以算出样品材料的禁带宽度。
 
@@ -220,7 +223,7 @@ U_H+U_E\approx U_H=\frac{U_1-U_2+U_3-U_4}{4}
 \subsection{实验仪器}
 实验仪器包括磁场、变温设备、测量线路、数字电压表等几个主要部分。
 
-\section{实验内容}
+\section{实验内容及数据}
 
 
 \section{实验讨论}

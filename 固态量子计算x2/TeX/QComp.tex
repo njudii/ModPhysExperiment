@@ -100,7 +100,7 @@ $ \phi $在单位三维球体上定义了一个点，这个球体通常被称为
 \subsubsection{量子逻辑门}
 经典计算中用到很多基本逻辑门，包括与门、或门、非门、异或门、与非门和或非门
 等，这些元件组合在一起能构成用来计算任何函数的硬件电路。量子计算机与此类
-似，也由一系列的量子门组合而成，以此来完成复杂计算任务。图\ref{fig:gate}列出了常用的量子逻辑门，其代表符号和矩阵表示。描述单个量子门的矩阵$ U $要求必须是幺正的，
+似，也由一系列的量子门组合而成，以此来完成复杂计算任务。图(\ref{fig:gate})列出了常用的量子逻辑门，其代表符号和矩阵表示。描述单个量子门的矩阵$ U $要求必须是幺正的，
 即$ U U^\dagger = I $. C-NOT门是一个两比特门，当控制比特是$ \ket{0} $时，目标比特不变。当控制比特是$ \ket{1} $时，目标比特发生翻转。\\
 \begin{figure}[H]
 	\centering
@@ -135,16 +135,202 @@ $ \phi $在单位三维球体上定义了一个点，这个球体通常被称为
 威胁RSA加密体系，Grover算法在搜索方面，指数级的加速。这些都有潜在的应用价
 值。下面我们以Deutsch-Jozsa算法为例，说明量子并行性的优势。\\
 \paragraph{Deutsch-Jozsa算法}~\\
-
-
+考虑定义在$ \{0,1\}^n $上的函数$ f(x) $，满足$ f(x)\in \{0, 1\} $，且$ f(x) $的输出分为两种情况。
+一种是，对于任意输入，它只输出$ 0 $或者$ 1$，我们称之为常函数；另一种情况是，恰好对于一半的输入，输出为$ 0 $，另一半输入，输出为$ 1 $，我们称之为平衡函数。问题是：对于未知的$ f(x) $，我们要区分它是常函数还是平衡函数。如果采用经典计算的方式，需要挨个检查输出结果，要得到准确无误的判断，最坏的情况需要进行$ 2^{n-1} + 1  $次计算。这是因为，如果进行了$ 2^{n-1} $次计算后，得到的是$ 2^{n-1} $个相同的输出，这时候仍不能确定$ f(x)  $是常函数还是平衡函数。若果采用量子计算的方式，对于同样的问题，只需要一次计算就可以得出结果，解决这个问题的量子算法称为Deutsch-Jozsa算法（简称D-J算法）。D-J算法是1992年由David Deutsch和Richard Jozsa提出的，是对1985年David Deutsch单独提出的Deustsh算法的一般性推广。Deutsch算法即是D-J算法$ n=1  $的情况。因为Deutsch算法更易说明，下面我们就详细讲解Deutsch算法。\\
+函数$ f(x) $，其定义域为$ \{0,1\} $，且$ f(x)\in\{0,1\} $，那么这样的函数共有四种情况，如下图所示：
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.65\linewidth]{fig/deutsch.jpg}
+	\caption{常函数与平衡函数举例：$ f_1(x) $ 与$ f_2(x)  $是常函数，$ f_3(x) $与$ f_4(x) $是平衡函数。}
+	\label{fig:deutsch}
+\end{figure}
+现在我们需要判断$ f(x)  $是常函数还是平衡函数，采用经典计算的方法，需要分
+别计算$ f(0)  $和$ f(1) $，然后判断$ f(0)  $和$ f(1)  $是否相等，共需进行两次计算。如果采用量子计算中的Deutsch算法，则只需一次计算就能够判定。如图 (\ref{fig:deutsch2}) 所示，是Deutsch算法的量子线路图。该量子算法需要两个量子比特，其初态是$ \ket{a} = \ket{01} $，然后对两个比特分别施加Hadamard门，得到的态为：
+\begin{equation}\label{key}
+\ket{b} = \qty(\dfrac{\ket{0} + \ket{1}}{\sqrt{2}}) \qty(\dfrac{\ket{0} - \ket{1}}{\sqrt{2}})
+\end{equation}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{fig/deutsch2.jpg}
+	\caption{Deutsch算法的量子线路图}
+	\label{fig:deutsch2}
+\end{figure}
+对$ \ket{b} $施加量子逻辑门$ U_f $，其中$ U_f $对量子比特态的作用为
+\begin{equation}\label{key}
+U_f\ket{x,y} = \ket{x,y\oplus f(x)}
+\end{equation}
+$ y\oplus f(x) $代表$ y+f(x) $以$ 2  $的余数。因此有
+\begin{equation}\label{key}
+\left\{\mqty{
+	U_f\ket{x,0} &= \ket{x, f(x)}\\
+	U_f\ket{x,1} &= \ket{x, 1-f(x)}
+}\right.	
+\end{equation}
+所以
+\begin{equation}\label{key}
+U_f\ket{x} \qty(\dfrac{\ket{0} - \ket{1}}{\sqrt{2}}) = \ket{x} \qty(\dfrac{\ket{f(x)} - \ket{1-f(x)}}{\sqrt{2}}) = (-1)^{f(x)} \ket{x} \qty(\dfrac{\ket{0} - \ket{1}}{\sqrt{2}})
+\end{equation}
+如果$ f(0) =f(1) $，即$ f(x)  $是常函数，经过$ U_f $作用之后得到的态是：
+\begin{equation}\label{key}
+\ket{c} = \pm \qty(\dfrac{\ket{0} + \ket{1}}{\sqrt{2}})\qty(\dfrac{\ket{0} - \ket{1}}{\sqrt{2}})
+\end{equation}
+如果$ f(0) \neq f(1) $，即$ f(x)  $是平衡函数，经过$ U_f $作用之后得到的态是：
+\begin{equation}\label{key}
+\ket{c} = \pm \qty(\dfrac{\ket{0} - \ket{1}}{\sqrt{2}})\qty(\dfrac{\ket{0} - \ket{1}}{\sqrt{2}})
+\end{equation}
+算法运行到这一步，第一个量子比特的态，已经与$ f(x)  $是常函数还是平衡函数产生关
+联。若$ f(x) $是常函数，则第一个量子比特的态是$ \qty(\dfrac{\ket{0} + \ket{1}}{\sqrt{2}}) $。若$ f(x)  $是平衡函数，则第一个
+量子比特的态是$ \qty(\dfrac{\ket{0} - \ket{1}}{\sqrt{2}}) $。\\
+然后对第一个量子比特施加Hadamard门，如果$ f(0) = f(1) $，
+即$ f(x)  $是常函数，我们得到：
+\begin{equation}\label{key}
+\ket{d} = \pm\ket{0}\qty(\dfrac{\ket{0} - \ket{1}}{\sqrt{2}})
+\end{equation}
+如果$ f(0) \neq f(1) $，即$ f(x)  $是平衡函数，我们得到:
+\begin{equation}\label{key}
+\ket{d} = \pm\ket{1}\qty(\dfrac{\ket{0} - \ket{1}}{\sqrt{2}})
+\end{equation}
+以$ \ket{0} $和$ \ket{1} $作为基矢，对第一个量子比特进行测量。如果$ f(x)  $是常函数，则测量结果是$ 0 $；如果$ f(x)  $是平衡函数，则测量结果是$ 1 $。\\
+总结一下Deutsch算法的过程，我们将量子比特制备到$ \ket{0} $和$ \ket{1} $的叠加态，只需进行一次计算，就可以根据末态的测量结果是$ 0  $还是$ 1 $，来判断$ f(x)  $是常函数还是平衡函数。根据经典算法，则需进行两次计算。将Deutsch算法的定义域从$ \{0,1\} $推广到$ \{0,1\}^n $，其解决方法即是D-J算法。D-J算法是最早提出的量子算法之一，虽然D-J算法解决的问题不具备太多实际意义，但该算法向人们展示了，解决某些问题时，量子计算能够比经典计算更高效。下面我们将讨论如何在实验上实现这一算法。
 
 \subsection{量子计算的实验实现}
+建造量子计算机的困难在于要找到一个可以编码量子比特，并且能够有效地被外
+界控制，但又与环境有很好的隔离，不致使系统很快退相干失去量子特性的物理系
+统。在介绍量子计算的物理实现技术之前，下面先介绍一下DiVincenzo关于量子计算
+物理实现技术的判据。
+\subsubsection{DiVincenzo判据}
+2000年，DiVincenzo讨论了实现量子计算的物理要求，并提出了如下的7条判据：
+\begin{enumerate}
+	\item 可扩展的具有良好特性的量子比特系统；
+	\item 能够制备量子比特到某个基准态；
+	\item 具有足够长的相干时间来完成量子逻辑门操作；
+    \item 能够实现一套通用量子逻辑门操作；
+	\item 能够测量量子比特；
+	\item 能够使飞行量子比特和静止量子比特互相转化；
+	\item 能够使飞行量子比特准确地在不同的地方之间传送。
+\end{enumerate}
+后面两条是针对量子计算机之间通信提出的要求，前面五条是实现量子计算的要求。
+人们已经在多种系统上试验了量子计算机的实现方案，包括离子阱、超导约瑟夫森
+结、腔量子电动力学、硅基半导体、量子点、液体核磁共振等等。下面我们以金刚石
+中的NV色心为例，说明量子计算的实验实现。
 
+\subsubsection{金刚石中的NV色心}
 
+NV(Nitrogen-Vacancy)色心是金刚石中的一种点缺陷。金刚石晶格中一个碳原子缺
+失形成空位，近邻的位置有一个氮原子，这样就形成以了一个NV色心。我们这里所
+说的NV色心，指的是带负电荷NV$ ^- $顺磁中心。NV色心的有六个电子，两个来自氮
+原子，三个来自与空位相邻的碳原子，另外一个是俘获的（来自施主杂质的）电子。
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{fig/NV.jpg}
+	\caption{金刚石和金刚石中的NV色心原子结构}
+	\label{fig:NV}
+\end{figure}
 
+\subsubsection{自旋态初始化和读出}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{fig/energy.jpg}
+	\caption{室温下金刚石NV 色心的能级结构示意图。会辐射出光子的跃迁用实线箭头表
+		示，非辐射跃迁用虚线箭头表示。}
+	\label{fig:energy}
+\end{figure}
+图(\ref{fig:energy})是室温下金刚石NV色心的能级结构。NV色心的基态为自旋三重态，三重
+态基态与激发态间跃迁相应的零声子线为$ \SI{637}{nm} $，红色区域为声子边带。基态的自旋三重态$ (\ket{m_s=0}, \ket{m_s=1}, \ket{m_s=-1}) $中，$ \ket{m_s=\pm 1} $在无磁场时是简并的，它们与$ \ket{m_s=0} $态之间的能隙（零场劈裂）对应微波频率为$ \SI{2.87}{GHz} $。激发态的能级自旋分裂对应的微波频率为$ \SI{1.4}{GHz} $。\\
+首先$ \SI{532}{nm}  $的激光激发基态电子，由于电子跃迁是电偶极跃迁与电子自旋无
+关，所以跃迁前后的自旋是守恒的。$ \ket{m_s=0} $的基态电子到$ \ket{m_s=0} $的声子边带，而$ \ket{m_s=\pm 1} $的基态电子到$ \ket{m_s=\pm 1} $的声子边带。之后$ \ket{m_s=0} $ 的电子绝大多数都直接跃迁到基态辐射荧光，而$ \ket{m_s=\pm 1} $的电子则一部分直接跃迁到基态辐射荧光，另一部分通过无辐射跃迁到单重态再到三重态的$ \ket{m_s=0} $态。经过多个周期之后，基态$ \ket{m_s=\pm 1} $上的布居度会越来越少，而$ \ket{m_s=0} $上的布居度会越来越多。这相
+当于，在激光的照射下，布居度从$ \ket{m_s=\pm 1} $转移到了$ \ket{m_s=0} $，从而实现了自旋极化。常温下NV色心电子自旋的极化率可达$ 95\% $以上。\\
+如果我们选取基态的$ \ket{m_s=0} $和$ \ket{m_s=1} $作为量子比特，NV色心的自旋极化就
+对应于将量子比特的初态极化到$ \ket{0} $态。\\
+由于$ \ket{m_s=\pm 1} $态有更大的概率通过无辐射跃迁，回到基态。所以$ \ket{m_s=0} $态的荧光比$ \ket{m_s=\pm 1} $态的荧光强度大，实验上得出大约大$ 20-40\% $。根据$ \ket{m_s=0} $态和$ \ket{m_s=\pm 1} $对应荧光强度的差别，就可以区分NV色心的自旋态，即实现对自旋量子比特状态的读出。由于由于单次实验得到的$ \ket{m_s=0} $态和$ \ket{m_s=\pm 1} $的荧光强度并不明显，室温下对NV色心电子自旋量子比特的测量一般为多次实验重复测量，测得的结果为某个观测量(如$ \ket{m_s=0}\bra{m_s=0} $) 的平均值。
 
+\subsubsection{自旋态操控}
+为了实现量子逻辑门，需要对NV色心的自旋状态进行操控。调控NV色心自旋态使用的是自旋磁共振技术，即利用微波场与自旋的相互作用，来调控自旋态的演化。
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{fig/spin.jpg}
+	\caption{自旋磁共振原理示意图}
+	\label{fig:spin}
+\end{figure}
+
+\paragraph{磁场中自旋的薛定谔方程描述}~\\
+量子力学中，描述量子态随时间演化的方程是薛定谔方程：
+\begin{equation}\label{Schr}
+H\Psi = \I\hbar\pdv{\Psi}{t}
+\end{equation}
+为了得到薛定谔方程的解，我们需要知道哈密顿量和初态波函数。考虑一个自旋$ 1/2 $
+的电子，处在均匀外磁场中，系统哈密顿量可以表示为：
+\begin{equation}
+H = -\bm\mu\cdot\vb{B}_0     \label{H}
+\end{equation}
+其中，$ \bm\mu $是电子磁矩，$ \vb{B}_0 $是平行于$ z  $轴的静磁场。电子磁矩与自旋之间的关系是：
+\begin{equation}\label{key}
+\bm\mu = \gamma\vb{S}
+\end{equation}
+比例常数$ \gamma $被称作旋磁比。自旋算符$ \vb{S} = \tfrac{\hbar}{2}\bm\sigma $，其中$ \bm\sigma =  (\sigma_x, \sigma_y, \sigma_z)  $是泡利算符，其矩阵形式如下：
+\begin{align}
+\sigma_x = \mqty(0 & 1\\ 1 & 0) && 
+\sigma_y = \mqty(0 & -\I\\ \I & 0) &&
+\sigma_z = \mqty(1 & 0\\ 0 & -1)
+\end{align}
+代入$ \eqref{H} $可得
+\begin{equation}
+\label{HH}
+H = -\dfrac{\hbar}{2}\mqty(\gamma B_0 & 0\\ 0 -\gamma B_0) 
+= -\dfrac{\hbar}{2}\mqty(\omega_0 & 0\\ 0 -\omega_0) 
+\end{equation}
+该哈密顿量的本征能级是$ -\tfrac{1}{2}\hbar\omega_0 $和$ \tfrac{1}{2}\hbar\omega_0 $，分别对应自旋向上和向下的本征态。能级
+差为$ \hbar\omega_0 $，恰好是频率为$ \omega_0 $的光子的能量。
+
+\paragraph{自旋进动}
+为了得到电子自旋在静磁场中的演化方程，我们记其自旋初态为
+\begin{equation}\label{key}
+\Psi_0(t) = a_0\ket{0} + b_0\ket{1}
+\end{equation}
+随时间演化的状态
+\begin{equation}\label{key}
+\Psi(t) = a\ket{0} + b\ket{1}
+\end{equation}
+其中
+\begin{align}\label{key}
+\ket{0} = \mqty(1\\ 0) & \qquad \ket{1} = \mqty(0\\ 1)
+\end{align}
+将$ \eqref{HH} $的哈密顿量带入薛定谔方程$ \eqref{Schr} $可以得到：
+\begin{equation}\label{key}
+\I\hbar\mqty(a\\ b) = -\dfrac{\hbar}{2}\mqty(\omega_0 & 0\\ 0 -\omega_0) \mqty(a\\ b)
+\end{equation}
+该方程的解是：
+\begin{align}\label{key}
+a = a_0\e^{\I \omega_0 t/2} &\quad  b = b_0\e^{\I \omega_0 t/2}
+\end{align}
+如果记$ \abs{a_0} = \cos(\alpha/2), \abs{b_0} = \sin(\alpha/2) $，那么可以得到：
+
+\paragraph{共振微波驱动}
+
+\section{实验装置}
+实验所用仪器“金刚石量子计算教学机”，是以光探测磁共振为基本原理，以金刚石
+NV色心为量子比特的量子计算教学设备。实验装置如图(\ref{fig:equip})所示。实验装置分为光学
+模块、微波模块和控制脉冲发生模块，整机由运行在电脑上的软件控制。
+%下面分别介绍各个模块的功能。
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{fig/equip.jpg}
+	\caption{实验装置图}
+	\label{fig:equip}
+\end{figure}
 
 \section{实验内容及结果}
+\subsection{启动}
+\begin{enumerate}
+	\item (1) 打开“金刚石量子计算教学机”背部的电源总开关，和前面板的银色金属开
+	关，电源指示灯亮起，表示仪器正常上电；
+	\item  打开电脑上控制软件Diamond I Studio，进入软件主界面。如图3.1所示；
+	\item  点击“连接设备”按钮后，若显示“仪器已连接，请开始实验”，表示仪器已
+	经可以进行实验。如果显示“仪器连接失败，请重新连接”。请再次点击“连接设备”
+	按钮，直至仪器连接成功；
+	
+\end{enumerate}
+
 \subsection{连续波实验}
 \subsection{拉比振荡实验}
 \subsection{$ T_2 $实验}

@@ -17,7 +17,15 @@
 \begin{document}
 \maketitle
 \bibliographystyle{unsrt}
+
+%\tableofcontents
+%\newpage
 %--------main-body------------
+
+%
+% 注：2019fall开始（也许）该实验作为单独实验，不再作为“核物理实验x2”的一部分。
+%
+%
 
 \section{引言}
 闪烁探测器是利用某些物质在射线作用下受激发光的特性来探测射线的仪器。它们的主要优点是：既能探测各种带电粒子，又能探测中性粒子；既能测量粒子强度，又能测量粒子能量；且探测效率高，分辨时间短。它在核物理研究和放射性同位素测量中得到广泛的应用。本实验目的是了解NaI(Tl)闪烁谱仪的原理、特性与结构，掌握NaI(Tl)闪烁谱仪的使用方法和$\gamma$射线能谱的刻度，学会NaI(Tl)闪烁谱仪的应用。
@@ -31,29 +39,29 @@ NaI(Tl)闪烁谱仪。
 
 \section{实验原理}
 
-\subsection{射线与物质的相互作用}
-射线与物质的相互作用主要是光电效应、康普顿散射和正、负电子对产生三种过程。
+\subsection{$ \gamma $射线与物质的相互作用}
+$ \gamma $射线与物质的相互作用主要是光电效应、康普顿散射和正、负电子对产生三种过程。
 \begin{enumerate}
 	\item 光电效应：入射$\gamma$粒子把能量全部转移给原子中的束缚电子，而把束缚电子打出来形成光电子。由于束缚电子的电离能$E_1$一般远小于入射$\gamma$射线能量$E_{\gamma}$ ，所以光电子的动能近似等于入射$\gamma$射线的能量。
-	      \begin{equation*}
+	      \begin{equation}
 		      E_{\text{光电}} = E_{\gamma} - E_1 \approx E_{\gamma}
-	      \end{equation*}
+	      \end{equation}
 	      \begin{figure}[!h]
 		      \centering
 		      \includegraphics[width=0.4\textwidth]{fig/fig1.pdf}
 		      \caption{康普顿散射示意图}\label{fig1}
 	      \end{figure}
 
-	\item 康普顿散射：核外电子与入射$\gamma$射线发生康普顿散射示意如图。设入射$\gamma$光子能量为$h\nu$，散射光子能量为$h\nu^{'}$，则反冲康普顿电子的动能$E_{\gamma}$
-	      \begin{equation*}
-		      E_{\gamma} = h\nu - h\nu^{'}
-	      \end{equation*}
+	\item 康普顿散射：核外电子与入射$\gamma$射线发生康普顿散射示意如图。设入射$\gamma$光子能量为$h\nu$，散射光子能量为$h\nu'$，则反冲康普顿电子的动能$E_{\gamma}$
+	      \begin{equation}
+		      E_{\gamma} = h\nu - h\nu'
+	      \end{equation}
 	      康普顿散射后散射光子能量与散射角$\theta$的关系为
-	      \begin{eqnarray}
-		      h\nu^{'} = \frac{h\nu}{1+\alpha(1-\cos\theta)}\label{eq1}\\
-		      \alpha = \frac{h\nu}{m_ec^2}\notag
-	      \end{eqnarray}
-	      $\alpha$为入射$\gamma$射线能量与电子静止质量之比。由上式可得，当$\theta=0$时，$h\nu =h\nu^{'}$。这时$E_e=0$，即不发生散射；当$\theta=180^{\circ}$时，散射光子能量最小，它等于$\frac{h\nu}{1+2\alpha}$，这时康普顿电子的能量最大，为
+	      \begin{align}
+		      h\nu' &= \frac{h\nu}{1+\alpha(1-\cos\theta)}\label{eq1}\\
+		      \alpha &= \frac{h\nu}{m_ec^2}
+	      \end{align}
+	      $\alpha$为入射$\gamma$射线能量与电子静止质量之比。由上式可得，当$\theta=0$时，$h\nu =h\nu'$。这时$E_e=0$，即不发生散射；当$\theta=180^{\circ}$时，散射光子能量最小，它等于$\frac{h\nu}{1+2\alpha}$，这时康普顿电子的能量最大，为
 	      \begin{equation}
 		      E_{e(max)} = h\nu\cdot\frac{2\alpha}{1+2\alpha}\label{eq2}
 	      \end{equation}
@@ -209,17 +217,17 @@ n = \frac{N}{t}\label{eq16}
 \begin{enumerate}
 \item 选定所求的全能峰，在全能峰选定左，右两个边界道址$l$，$r$一般选在峰两侧的峰谷处。
 \item 求得峰内各道计数的总和
-\begin{equation*}
+\begin{equation}
 T = \sum\limits_{i=l}^rI_i
-\end{equation*}
+\end{equation}
 \item 计算本底计数
-\begin{equation*}
+\begin{equation}
 B = \frac12(I_l+I_r)\cdot(r-l+1)
-\end{equation*}
+\end{equation}
 \item 计算净计数$N=T-B$及统计误差
-\begin{equation*}
+\begin{equation}
 \sigma_N^2 = T + \frac12(r-l+1)\cdot B
-\end{equation*}
+\end{equation}
 \end{enumerate}
 
 \subsection{辐射强度测量}
