@@ -11,8 +11,8 @@ data/
 .vscode/
 *.py
 
-*.doc
-*.docx
+!*.doc
+!*.docx
 
 *.zip
 *.txt
