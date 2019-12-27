@@ -11,10 +11,14 @@
 \usepackage{graphicx}
 \usepackage{geometry}
 \geometry{left=2.5cm,right=2.5cm,bottom=2.5cm,top=2.5cm}
+
+\usepackage{textcomp}
+
 \title{近代物理实验报告5.2：X射线衍射物相分析}
 \author{xy\quad 学号\quad 匡亚明学院}
 \date{2019年2月29日}
-\begin{document}\sloppy
+\begin{document}
+%\sloppy
 \maketitle
 \bibliographystyle{unsrt}
 %--------main-body------------
@@ -25,26 +29,59 @@
 \section{实验目的}
 \begin{enumerate}
 \item 掌握物相定性分析基本方法。
-\item 掌握XD-3A X射线衍射仪的使用。
+\item 掌握D8 X射线衍射仪的使用。
 \end{enumerate}
 
-\section{实验仪器}
-XD-3A X射线衍射仪。
 
 \section{实验原理}
 任何结晶物质，无论它是单晶体还是多晶体，都具有特定的晶体结构类型、晶胞大小、晶胞中原子、粒子或分子数目的多少，以及它们所在的位置，因此给出特定多晶体X射线衍射花样，更明确地说，一种多晶物质，无论是纯相还是存在于多相混合试样中，它都给出特定的衍射花样、事实上没有两种不同的结晶物质可以给出完全相同的衍射花样。另一方面，未知混合物的花样是混合物中各相物质衍射花样的总和，每种相的各衍射线条的d值、相对强度不变，这就是能用X射线衍射方法作物相定性分析(物相鉴定)的基础。
 
 定性分析的基础方法是将未知物相的衍射花样与已知物质的衍射花样相对照，这种方法是Hanawalt及其合作者首先创建的，起初它们搜集了1000多种化合物的衍射数据作为基本参考。后来，美国材料试验学会和X射线及衍射电子学会在1942年出版了第一组衍射数据卡片，以后逐年增编，到1963年一共出版了13组，后来每年出版一组，并分为有机和无机两部分，称为ASTM卡片，1969年建立了粉末衍射标准联合委员会(简称JCPDS)，这个国际性组织，在有关国家相应组织的合作下，编辑出版粉末衍射卡组，简称PDF卡组，为了查寻与未知物质花样对比的卡片，还编制了各种索引。
 
+\section{实验仪器}
+德国布鲁克公司D8 X射线衍射仪
+\begin{itemize}
+	\item X射线光源: 3kW封闭靶（陶瓷X光管）。
+	\item 测角仪: 扫描方式$ \theta/\theta $联动测角仪，测角仪的样品台水平放置并保持不动，角度重现性达到$ 0.0001\textdegree $。
+	\item 驱动方式：步进马达驱动; 最高定位速度：$ 1500 $\textdegree/min
+	\item 狭缝系统：包括索勒狭缝、发散狭缝、防散射狭缝、接受狭缝等。
+	\item LynxEye 探测器：（1）强度增益比常规的闪烁计数器高150倍，同时具有优秀的分辨率及信噪比。（2）超快的测量速度。（3）良好的低角度测量性能。（4）良好的分辨率。
+	\item 循环水冷系统:要求连续工作; 控温精度$ \leq \pm 2\textcelsius $; 供水流量,满足发生器要求, 进水度可调; 过热保护。
+\end{itemize}
+
 \section{实验内容}
 \begin{enumerate}
 \item 样品的制备和安装。
 \begin{enumerate}
-\item 将被测试样放在玛瑙研钵中研磨至200$\sim$300目。
+\item 将被测试样放在玛瑙研钵中研磨至200$\sim$300目(本次实验略去这一步)。
 \item 把平板玻璃与试样板擦净，试样板放在玻璃上，把有线条一面朝下，用刮刀将粉末填入样品板孔中，略高于样品板，用刮刀将试样压平，勿反复压，也不要拖刮刀。试样压好后，紧贴平板玻璃一面作为X光照射面，并检查一下是否平整，然后将样品板插入样品台架，其中心线对准样品台的中心线。
 \end{enumerate}
-\item 按XD-3A X射线衍射仪操作规程开机。选择各参数(时间常数、扫描速度、狭缝宽度、量程等)，同时打开记录仪开关，开始测量。即可获得一张衍射图谱。
+\item 按D8 X射线衍射仪操作规程开机。
+%选择各参数(时间常数、扫描速度、狭缝宽度、量程等)，同时打开记录仪开关，开始测量。即可获得一张衍射图谱。
+\begin{enumerate}
+	\item 开总电源。
+    \item 开电脑。
+	\item 开循环水。
+	\item 开仪器电源（按绿色按钮，由4灯全亮变成ON和ALARM灯亮）。
+	\item 开X-ray高压（右侧扳手顺时针向上扳45度保持$ 3\sim 5 $秒，直到Ready灯亮）。
+	\item 开BIAS（在前盖盘内）。
+\end{enumerate}
+\item 开软件XRD Commander。在XRD Commander里升电压和电流，每隔30秒加5kV直到40kV；然后加电流，每隔30秒加5mA直到40mA。如果停机2天以上最好做光管老化。
+%：点击D8 Tools主界面/X-ray generator，点击工具栏里的utilities/X-ray.../Tube condition ON/OFF，在右下角的状态栏出现Tube condition ON，电压和电流会逐步升到50kV-5mA。大概需要1小时，等电压和电流回到20kV-5mA，点击Tube condition ON/OFF老化结束。
+\item 在XRD Commander中初始化（点击两个轴上面的选项Requested，选定两个轴，使Tube为20，Detector为20，点击菜单里的初始化图标进行初始化）。做物相分析在Scantype中选Locked Coupled，并且在Detail中将探测器改为1D。
+在XRD Commander中选择各参数（起始角、终止角、步长等）开始测量。即可获得一张衍射图谱，将其保存为*.raw文件。\\
+对于未知的样品：首先，扫描范围$ 10\textdegree\sim 90\textdegree $，步长大些，快速扫描。然后，参照第前面的谱线，把扫描起始角放在第一个峰前一点，把终止角放在最后一个峰后一点。对于一般定性分析用连续扫描。对于定量分析（例如无标样定量相分析等）对强度要求高，就用步进扫描。
 \item 按XD-3A X射线衍射仪操作规程关机。
+\begin{enumerate}
+	\item 在软件里降高压。在软件XRD Commander里将高压调到20kV$ \sim $5mA，点击“Set”。
+	\item 关软件XRD Commander。
+	\item 关X-ray高压（右侧扳手逆时针向上扳45度），再等5分钟。
+	\item 关仪器电源（按红色按钮）。
+	\item 关循环水（关仪器电源后迅速关水）。
+	\item 关BIAS（在前盖盘内）。
+	\item 关电脑。
+    \item 关总电源。
+\end{enumerate}
 \item 物相分析。
 \begin{enumerate}
 \item 根据衍射图谱选出三条最强线$d_1$，$d_2$，$d_3$(按强度减弱排列)。
@@ -61,12 +98,12 @@ XD-3A X射线衍射仪。
 \section{误差分析}
 
 \section{思考题}
-\subsection{定性物相分析的基本方法是什么？}
-\subsection{XD-3A X射线衍射仪由哪几部分组成？}
-\subsection{实验中怎样选择时间常数？}
-\subsection{简述物相分析的步骤。}
-\subsection{叙述物相定性分析的局限性？如何避免相分析的误判或漏判现象？}
-\subsection{为什么衍射仪法记录的始终是平行于试样表面的晶面的衍射？不平行表面的晶面是否也有衍射产生？}
+\subsection*{定性物相分析的基本方法是什么？}
+\subsection*{XD-3A X射线衍射仪由哪几部分组成？}
+\subsection*{实验中怎样选择时间常数？}
+\subsection*{简述物相分析的步骤。}
+\subsection*{叙述物相定性分析的局限性？如何避免相分析的误判或漏判现象？}
+\subsection*{为什么衍射仪法记录的始终是平行于试样表面的晶面的衍射？不平行表面的晶面是否也有衍射产生？}
 
 \nocite{jiaocai}
 \bibliography{ref}
