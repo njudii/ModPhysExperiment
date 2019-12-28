@@ -13,6 +13,7 @@
 \geometry{left=2.5cm,right=2.5cm,bottom=2.5cm,top=2.5cm}
 
 \usepackage{textcomp}
+\usepackage{physics}
 
 \title{近代物理实验报告5.2：X射线衍射物相分析}
 \author{\quad 学号\quad 匡亚明学院}
@@ -40,8 +41,8 @@ X射线最早由德国科学家W.C. Roentgen在1895年在研究阴极射线发�
 
 \section{实验原理}
 
-\subsection{X射线的产生和X射线的光谱}
-实验中通常使用X光管来产生X射线。在抽成真空的X光管内，当由热阴极发出的电子经高压电场加速后，高速运动的电子轰击由金属做成的阳极靶时，靶就发射X射线。
+\subsection{X射线的产生和X射线谱}
+实验中通常使用X光管来产生X射线。在抽成真空的X光管内，当由热阴极发出的电子经高压电场加速后，高速运动的电子轰击由金属做成的阳极靶时，靶就发射X射线。靶材料的原子序数愈大，X射线波长愈短，能量愈大，穿透能力愈强。
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{fig/X1.jpg}
@@ -72,7 +73,12 @@ X射线波长与晶面间距相近，可以产生衍射。晶面间距d和X射�
 \begin{equation}\label{key}
 2d\sin\theta = n\lambda
 \end{equation}
-根据布拉格方程，不同的晶面，其对X射线的衍射角也不同。因此，通过测定晶体对X射线的衍射，就可以得到它的X射线粉末衍射图。%如下图3就是衍射仪的图谱。
+根据布拉格方程，不同的晶面，其对X射线的衍射角也不同。因此，通过测定晶体对X射线的衍射，就可以得到它的X射线粉末衍射图，如下图所示。
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\linewidth]{fig/XRD.jpg}
+	\caption{粉末衍射图谱}
+\end{figure}
 
 \subsection{物相鉴定原理}
 %任何结晶物质均具有特定晶体结构（结构类型，晶胞大小及质点种类，数目，分布）和组成元素。一种物质有自己独特的衍射谱与之对应，多相物质的衍射谱为各个互不相干，独立存在物相衍射谱的简单叠加。
@@ -93,13 +99,20 @@ X射线波长与晶面间距相近，可以产生衍射。晶面间距d和X射�
 	\item LynxEye 探测器：（1）强度增益比常规的闪烁计数器高150倍，同时具有优秀的分辨率及信噪比。（2）超快的测量速度。（3）良好的低角度测量性能。（4）良好的分辨率。
 	\item 循环水冷系统:要求连续工作; 控温精度$ \leq \pm 2\textcelsius $; 供水流量,满足发生器要求, 进水度可调; 过热保护。
 \end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\linewidth]{fig/D8.png}
+	\caption{D8 X射线衍射仪}
+\end{figure}
 
 \section{实验内容}
+\subsection{X射线衍射}
 \begin{enumerate}
 \item 样品的制备和安装。
 \begin{enumerate}
 \item 将被测试样放在玛瑙研钵中研磨至200$\sim$300目(本次实验略去这一步)。
-\item 把平板玻璃与试样板擦净，试样板放在玻璃上，把有线条一面朝下，用刮刀将粉末填入样品板孔中，略高于样品板，用刮刀将试样压平，勿反复压，也不要拖刮刀。试样压好后，紧贴平板玻璃一面作为X光照射面，并检查一下是否平整，然后将样品板插入样品台架，其中心线对准样品台的中心线。
+\item 把平板玻璃与试样板擦净，试样板放在玻璃上，把有线条一面朝下，用刮刀将粉末填入样品板孔中，略高于样品板，用刮刀将试样压平，勿反复压，也不要拖刮刀。试样压好后，紧贴平板玻璃一面作为X光照射面，并检查一下是否平整。(本次实验略去这一步)
+\item 将样品板插入样品台架，其中心线对准样品台的中心线。
 \end{enumerate}
 \item 按D8 X射线衍射仪操作规程开机。
 %选择各参数(时间常数、扫描速度、狭缝宽度、量程等)，同时打开记录仪开关，开始测量。即可获得一张衍射图谱。
@@ -116,7 +129,7 @@ X射线波长与晶面间距相近，可以产生衍射。晶面间距d和X射�
 \item 在XRD Commander中初始化（点击两个轴上面的选项Requested，选定两个轴，使Tube为20，Detector为20，点击菜单里的初始化图标进行初始化）。做物相分析在Scantype中选Locked Coupled，并且在Detail中将探测器改为1D。
 在XRD Commander中选择各参数（起始角、终止角、步长等）开始测量。即可获得一张衍射图谱，将其保存为*.raw文件。\\
 对于未知的样品：首先，扫描范围$ 10\textdegree\sim 90\textdegree $，步长大些，快速扫描。然后，参照第前面的谱线，把扫描起始角放在第一个峰前一点，把终止角放在最后一个峰后一点。对于一般定性分析用连续扫描。对于定量分析（例如无标样定量相分析等）对强度要求高，就用步进扫描。
-\item 按XD-3A X射线衍射仪操作规程关机。
+\item 按D8 X射线衍射仪操作规程关机。
 \begin{enumerate}
 	\item 在软件里降高压。在软件XRD Commander里将高压调到20kV$ \sim $5mA，点击“Set”。
 	\item 关软件XRD Commander。
@@ -127,15 +140,32 @@ X射线波长与晶面间距相近，可以产生衍射。晶面间距d和X射�
 	\item 关电脑。
     \item 关总电源。
 \end{enumerate}
-\item 物相分析。
+\end{enumerate}
+
+\subsection{物相分析}
+\iffalse
 \begin{enumerate}
-\item 根据衍射图谱选出三条最强线$d_1$，$d_2$，$d_3$(按强度减弱排列)。
-\item 根据最强线的面间距$d_1$，在Hanawalt数字索引中找到所属的组，再根据$d_2$和$d_3$找到其中的一行。
-\item 比较此行中的三条线，看其相对强度是否与待测试样的三强线基本一致。如$d$和$\frac{I}{I_1}$都基本一致，则可初步判断未知试样中含有所载的这种物质。
-\item 根据索引中查找的卡片号，从卡片盒中找到所需卡片。
-\item 将卡片上全部$d$和$\frac{I}{I_1}$与未知试样的$d$和$\frac{I}{I_1}$对比，如果完全吻合，则卡片上记载的物质，就是要分析的试样。
+	\item 根据衍射图谱选出三条最强线$d_1$，$d_2$，$d_3$(按强度减弱排列)。
+	\item 根据最强线的面间距$d_1$，在Hanawalt数字索引中找到所属的组，再根据$d_2$和$d_3$找到其中的一行。
+	\item 比较此行中的三条线，看其相对强度是否与待测试样的三强线基本一致。如$d$和$\frac{I}{I_1}$都基本一致，则可初步判断未知试样中含有所载的这种物质。
+	\item 根据索引中查找的卡片号，从卡片盒中找到所需卡片。
+	\item 将卡片上全部$d$和$\frac{I}{I_1}$与未知试样的$d$和$\frac{I}{I_1}$对比，如果完全吻合，则卡片上记载的物质，就是要分析的试样。
 \end{enumerate}
 实验中得出的$d$和$\frac{I}{I_1}$，与卡片上记载的数据可能有出入，这是由于实验条不同和测量准确度不同所造成。在$d$和$\frac{I}{I_1}$这两组数据中，应以$d$的吻合为主。
+\fi
+\begin{enumerate}
+	\item 打开Eva软件。
+	\item 将待处理的数据文件导入。点击File/Import/Scan调入原始数据文件*.raw进行处理（或点击File/Open调入*.EVA文件进行处理）。
+	\item 在ToolBox框内进行数据处理。
+	\begin{enumerate}
+		\item 扣背景：点击Backgnd/点击Default/点击Replace，显示扣背景处理后的数据
+		\item 删除k：点击Strip k/点击Default/点击Replace，显示处理后的数据（也可以上下移动滑块调整至合适，单击Replace，显示处理后的数据）
+		\item 平滑处理：单击Smooth/点击Default/点击Replace，显示处理后的数据（也可以设定需要平滑的参数，左右或上下移动滑块进行调整，合适后单击Replace，显示处理后的数据）
+		\item 寻峰：点击Peak Search，设定寻峰参数（门槛threshold与峰宽Width标定，可以上下移动滑块进行调整）。点击“Append to list”标定全谱衍射d值（标定漏峰只需按左键将“$ \downarrow $”拖移至峰顶点击即可，删除峰可点击删除峰与“$ \cross $”即可），此时数据在peak状态列于框内。
+	\end{enumerate}
+    \item 选定所有的峰，单击Made DIF生成DIF文件。
+    \item 物相的定性分析：点击Search/Match。在Search/Match框内选择前三个Quality Marks，选择可能的元素，并选择Pattern，点击Search进行检索/匹配。（先选Toggle All/点击左上角的元素“H”可以将所有的元素变为红色，即肯定没有。选择肯定有的点成绿色。选择可能有的点成灰色。）。最后根据列表给出的可能物质通过比较卡片内的谱线和实际测量出谱线的吻合程度来确定组成成分，也就完成了X射线衍射的初步分析工作。
+    \item 导出分析结果。
 \end{enumerate}
 
 \section{实验数据}
