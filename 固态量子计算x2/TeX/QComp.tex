@@ -304,8 +304,65 @@ H = -\dfrac{\hbar}{2}\mqty(\gamma B_0 & 0\\ 0 -\gamma B_0)
 a = a_0\e^{\I \omega_0 t/2} &\quad  b = b_0\e^{\I \omega_0 t/2}
 \end{align}
 如果记$ \abs{a_0} = \cos(\alpha/2), \abs{b_0} = \sin(\alpha/2) $，那么可以得到：
+\begin{align}
+\ev{S_z} &= \dfrac{\hbar}{2}\cos\alpha \\
+\ev{S_x} &= \dfrac{\hbar}{2}\sin\alpha\cos(\omega_0 t + \alpha_0) \\
+\ev{S_y} &= -\dfrac{\hbar}{2}\sin\alpha\sin(\omega_0 t + \alpha_0) \\
+\end{align}
+对于上述结果，可以有一个直观的几何解释。如图(\ref{fig:larmor})所示，磁矩的XY分量大小是$ \dfrac{1}{2}\sin\alpha $，并且绕着外磁场方向Z轴转动，转动频率为$ \omega_0 $。这个过程也叫作拉莫进动，$ \omega_0 $被称作拉莫频率。
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{fig/larmor.jpg}
+	\caption{磁矩绕着外磁场方向做拉莫进动}
+	\label{fig:larmor}
+\end{figure}
 
 \paragraph{共振微波驱动}
+考虑加一个XY平面内圆偏振的微波场：
+\begin{equation}\label{key}
+\left\{
+\mqty{B_x &= B_1\cos\omega t\\
+	  B_y &= B_1\sin\omega t}\right.
+\end{equation}
+记$ \omega_1 = \gamma B_1 $，代入方程$ \eqref{Schr} $可以得到：
+\begin{equation}\label{key}
+\I\hbar \mqty(a\\ b) = -\dfrac{\hbar}{2}
+\mqty(\omega_0 & \omega_1\e^{\I\omega t}\\ \omega_1\e^{-\I\omega t} & -\omega_0) \mqty(a \\ b)
+\end{equation}
+
+假设$ t = 0  $的时候，电子占据的是自旋向下的态。我们希望得到，$ t > 0  $时，在微
+波场的驱动下，电子占据自旋向上态的概率。%也就是说：
+
+通过求解薛定谔方程，可以得到：
+\begin{equation}\label{key}
+P_\uparrow = \abs{a(t)}^2 = \dfrac{\omega_1^2}{\omega_1^2 + (\omega_0 - \omega)^2}\sin^2\delta t
+\end{equation}
+其中，
+\begin{equation}\label{key}
+\delta = \sqrt{\omega_1^2 + (\omega_0 - \omega)^2}
+\end{equation}
+该过程也可以几何的理解。前面提到，当有静磁场的时候，自旋绕着静磁场方向做进
+动。当施加一个额外交变磁场，自旋会感受一个力矩，使其从z轴向-z轴
+方向翻转，如图(\ref{fig:larmor2})。这个过程也叫作自旋的拉比振荡，翻转频率也称作拉比频率。
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{fig/larmor2.jpg}
+	\caption{微波频率与拉莫进动频率一致时，磁矩绕着外磁场方向z轴做章动}
+	\label{fig:larmor2}
+\end{figure}
+
+实现了拉比振荡，即说明实现了对NV色心自旋的相干操控，量子比特在$ \ket{0} $态
+和$ \ket{1} $态之间振荡。共振驱动的情况下，当$ \omega_1 t = \pi $时，量子比特从$ \ket{0} $态完全转到了$ \ket{1} $态，即实现了一个非门操作，这个脉冲也叫作$ \pi $脉冲。当$ \omega_1 t = \pi/2 $时，我们得到$ \ket{0} $态和$ \ket{1} $的叠加态，即 
+\begin{equation}\label{key}
+\ket{0} \rightarrow \dfrac{\ket{0} + \I\ket{1}}{\sqrt{2}} 
+\end{equation}。
+这是量子计算中非常重要的逻辑门，这个脉冲也叫作$ \pi/2 $脉冲。
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{fig/rabi.jpg}
+	\caption{拉比振荡曲线示意图}
+	\label{fig:rabi}
+\end{figure}
 
 \section{实验装置}
 实验所用仪器“金刚石量子计算教学机”，是以光探测磁共振为基本原理，以金刚石
@@ -322,17 +379,61 @@ NV色心为量子比特的量子计算教学设备。实验装置如图(\ref{fig
 \section{实验内容及结果}
 \subsection{启动}
 \begin{enumerate}
-	\item (1) 打开“金刚石量子计算教学机”背部的电源总开关，和前面板的银色金属开
+	\item 打开“金刚石量子计算教学机”背部的电源总开关，和前面板的银色金属开
 	关，电源指示灯亮起，表示仪器正常上电；
-	\item  打开电脑上控制软件Diamond I Studio，进入软件主界面。如图3.1所示；
+	\item  打开电脑上控制软件Diamond I Studio，进入软件主界面。%如图3.1所示；
 	\item  点击“连接设备”按钮后，若显示“仪器已连接，请开始实验”，表示仪器已
 	经可以进行实验。如果显示“仪器连接失败，请重新连接”。请再次点击“连接设备”
-	按钮，直至仪器连接成功；
-	
+	按钮，直至仪器连接成功；	
 \end{enumerate}
 
 \subsection{连续波实验}
+测量NV色心连续波谱的时候，收集的是其发出的荧光信号，这其中的物理基础是，
+NV色心的自旋态能够被激光初始化，并且发出荧光的亮度是依赖于自旋状态的。施
+加微波到色心上，可以改变自旋在$ \ket{m_s=0} $态和$ \ket{m_s=\pm 1} $态的布居，从而改变荧光
+强度。因为NV色心的荧光亮度是依赖于自旋态的。改变施加的微波频率，当共振的微
+波改变了自旋状态，荧光亮度会相应的发生改变。因此，但微波频率与能级间隔共振
+时，谱线上会出现低谷。如下图所示，是不同磁场大小下的连续波谱示意图。左侧的
+低谷对应于$ \ket{m_s=0} \rightarrow \ket{m_s=-1} $的跃迁，右侧的低谷对应于$ \ket{m_s=0} \rightarrow \ket{m_s=1} $
+的跃迁。根据塞曼效应，两个低谷对应的频率之差，正比于外磁场的大小。
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{fig/cont.jpg}
+	\caption{NV色心的连续波谱示意图}
+	\label{fig:cont}
+\end{figure}
+
+实验流程如下：
+\begin{enumerate}
+	\item 输入微波频率起始值和结束值，或者输入中心值和频率宽度，确定频率扫描
+	的范围；
+	\item 输入步进次数，作为实验曲线的点数。实验点数越多，意味着相邻点之间的
+	频率差越小；
+	\item 输入循环次数，作为实验平均的次数，一般取值100-300次；
+	\item 输入微波功率，一般取-10 dBm；
+	\item 选择实验数据保存路径；
+	\item 点击开始实验按钮，实验开始执行；
+	\item 等待执行完所设定循环次数，则实验终止；
+	\item 通过拟合得到共振频率。
+\end{enumerate}
+
+
 \subsection{拉比振荡实验}
+对于NV色心而言，实现拉比振荡的脉冲序
+列如下：首先打开激光，将NV色心自旋态初始化到$ \ket{m_s=0} $，然后关闭激光，打
+开微波。微波脉冲的频率等于共振频率，最后再施加激光，将NV色心自旋态读出。如图(\ref{fig:rabip})所示。
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{fig/rabipulse.jpg}
+	\caption{拉比振荡实验脉冲序列}
+	\label{fig:rabip}
+\end{figure}
+其中$ t  $是微波脉冲宽度，$ t = t_0 + (N - 1)\Delta t $，$ N $是实
+验的点数，$ t_0  $是第一个实验点的脉冲宽度，$ \Delta t  $是脉冲宽度的增量。
+
+施加的微波脉冲宽度不同，自旋演化的状态就不同。将微波脉冲宽度与荧光计数对
+应起来，就可以得到拉比振荡的曲线。本实验中需要用到$ \ket{m_s=0} \rightarrow \ket{m_s=1} $和$ \ket{m_s=0} \rightarrow \ket{m_s=-1} $两个跃迁频率，所以微波模块中有个两个微波源，在进行拉比振荡实验的时候，用两个波源（记为“波源1”和“波源2”）分别测定两个频率的拉比振荡。
+
 \subsection{$ T_2 $实验}
 \subsection{D-J算法实验}
 \subsection{设计实验}
@@ -345,6 +446,12 @@ NV色心为量子比特的量子计算教学设备。实验装置如图(\ref{fig
 
 \section{思考题}
 \subsection*{请利用布洛赫球表示以下量子态:}
+\begin{enumerate}
+	\item $ \ket{\psi} = \dfrac{\ket{0} + \ket{1}}{\sqrt{2}} $
+	\item $ \ket{\psi} = \dfrac{\ket{0} - \ket{1}}{\sqrt{2}} $
+	\item $ \ket{\psi} = \dfrac{\ket{0} + \I\ket{1}}{\sqrt{2}} $
+	\item $ \ket{\psi} = \dfrac{\ket{0} - \I\ket{1}}{\sqrt{2}} $
+\end{enumerate}
 
 \subsection*{如果实验中施加的微波频率$ f $与共振频率$ f_0 $有偏差，即$ f = f_0 + \delta f $，拉比振荡的频率会如何变化？}
 
