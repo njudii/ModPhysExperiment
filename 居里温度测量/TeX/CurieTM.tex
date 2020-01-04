@@ -12,6 +12,9 @@
 \usepackage{geometry}
 \geometry{left=2.5cm,right=2.5cm,bottom=2.5cm,top=2.5cm}
 
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+
 \providecommand{\keywords}[1]{\textbf{关键词： #1}}
 
 \title{近代物理实验报告10.6：居里温度测量}
@@ -68,7 +71,9 @@
     \includegraphics[width=\textwidth]{fig/fig3.pdf}
     \caption{理想的$\text{ABO}_3$钙钛矿结构}\label{fig3}
 \end{figure}
-这些钙钛矿锰氧化物的母本氧化物是LaMnO3，Mn离子为正二价，这是一种显示反铁磁性的绝缘体，呈理想的钙钛矿结构。早在20世纪50-60年代，人们已经发现，如果用二价碱土金属离子(Sr、Ca、Pb等)部分取代三价稀土离子，Mn离子将处于混合价状态，于是，通过和离子之间的双交换作用，在一定温度($T_p$)以下、将同时出现绝缘体—金属转变和顺磁性—铁磁性转变。随着含Sr量的增加，锰氧化物的R—T曲线形状发生明显变化。
+这些钙钛矿锰氧化物的母本氧化物是LaMnO3，Mn离子为正二价，这是一种显示反铁磁性的绝缘体，呈理想的钙钛矿结构。早在20世纪50-60年代，人们已经发现，如果用二价碱土金属离子(Sr、Ca、Pb等)部分取代三价稀土离子，Mn离子将处于混合价状态，于是，通过和离子之间的双交换作用\cite{jonker1950ferromagnetic}\cite{van1950electrical}，在一定温度($T_p$)以下、将同时出现绝缘体—金属转变和顺磁性—铁磁性转变\cite{anderson1955considerations}\cite{zener1951interaction}。随着含Sr量的增加，锰氧化物的R—T曲线形状发生明显变化。1970-1990年间，人们陆续观察到一些不同成分的钙钛矿锰氧化物块体和薄膜，具有较大的负磁电阻效应。1994年Jin等人在$ \ce{La_{2/3}Ca_{2/3}MnO_3} $薄膜中于$ \SI{6}{T} $的磁场下观测到磁电阻MR高达99.9\%\cite{jin1994colossal}\cite{jin1994thousandfold}\cite{mccormack1994very}。这类材料具有的磁电阻被命名为庞磁电阻(CMR)。
+
+这类材料在一定成分范围内，呈铁磁性，居里温度较高，吸引了人们极大的研究兴趣。
 
 \section{实验仪器}
 信号源、锁定放大器、数字电压表、石英管、热电偶。
